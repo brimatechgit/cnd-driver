@@ -33,26 +33,28 @@ LogBox.ignoreLogs(['Animated: `useNativeDriver` was not specified. This is a req
     return ( 
         <View style={styles.container}>
            
-
+        <View style={{bottom: '45%', flexDirection: 'row'}}>
+          <View style={{width: '70%'}}>
             <Text style={{fontSize: 25,
-        left: 25,
-        top: 5,
-        color: colorValue
-        }}>{statusValue}</Text>
+                left: 25,
+                color: colorValue
+                }}>{statusValue}
+          </Text>
+          </View>
 
-           <View style={{top: 10, right: 10}}>
+           <View style={{left: '7%'}}>
 
-           <Switch
-            
-            
-value={switchValue}
-onValueChange={toggleSwitch}
-backgroundActive={'#3770b7'}
-backgroundInactive={'gray'}
-circleActiveColor={'#3e7fc1'}
-circleInActiveColor={'#000000'}/>
+            <Switch
+              value={switchValue}
+              onValueChange={toggleSwitch}
+              backgroundActive={'#3770b7'}
+              backgroundInactive={'gray'}
+              circleActiveColor={'#3e7fc1'}
+              circleInActiveColor={'#000000'}/>
 
            </View>
+          
+        </View>
             
             
         </View>

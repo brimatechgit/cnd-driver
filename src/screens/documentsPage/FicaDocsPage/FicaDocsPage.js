@@ -107,6 +107,14 @@ const FicaDocsPage = () => {
                                         </Text>
                                     </View>
                                 </View>
+                                <View style={{flexDirection: 'row'}}>
+                                    <Text style={styles.text}>Police Clearance Certificate </Text>
+                                    <View style={styles.iconCircle}>
+                                        <Text>
+                                            <Icon name="plus" size={15} color="white"></Icon>
+                                        </Text>
+                                    </View>
+                                </View>
                             </View>
                         </View>
                     </Card>

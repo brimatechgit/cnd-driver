@@ -10,8 +10,23 @@ const SupportPage = () => {
     return ( 
         <View>
 
+        <View>
+        <Text style={styles.textHeader}>Payment</Text>
+            <View>
 
-        <View styles={styles.accHeader}></View>
+                <Card style={{elevation: 10, paddingVertical: 10}}>
+
+                    <View style={{flexDirection: 'row'}}>
+
+                <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
+                    <View style={styles.textContainer}>
+
+                    <Text style={{fontSize: 22}}>Bank Details</Text>
+                    </View>
+                    </View>
+                </Card>
+            </View>
+        </View>
         <View>
             <Text style={styles.textHeader}>Support</Text>
             <View>
@@ -23,7 +38,7 @@ const SupportPage = () => {
                 <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
                     <View style={styles.textContainer}>
 
-                    <Text style={{fontSize: 22}}>Privacy Policy</Text>
+                    <Text style={{fontSize: 22}}>Policies</Text>
                     </View>
                     </View>
                 </Card>
@@ -37,25 +52,6 @@ const SupportPage = () => {
                 </View>
 
 
-                <View style={styles.viewContainer}>
-                    <View style={styles.leadIcon}><Icon name="help" size={30}></Icon></View>
-                    
-                    <View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
-
-                    <Text style={styles.text}>FAQ</Text>
-                    <View style={styles.trailIcon}><Icon name="chevron-forward" size={20}></Icon></View>
-                        
-                    </View>
-                    
-                </View>
-                <View style={styles.viewContainer}>
-                    <View style={styles.leadIcon}><Icon name="md-chatbubbles" size={30}></Icon></View>
-                    
-                    <View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
-                        <Text style={styles.text}>Live Chat</Text>
-                        <View style={styles.trailIcon}><Icon name="chevron-forward" size={20}></Icon></View>
-                    </View>
-                </View>
                 <View style={styles.viewContainer}>
                     <View style={styles.leadIcon}><MIcon name="contact-phone" size={30}></MIcon></View>
                     

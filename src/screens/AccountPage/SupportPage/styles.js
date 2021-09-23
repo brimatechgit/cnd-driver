@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     padding: 5, flexDirection: 'row', elevation: 10, alignItems: 'center'
    }, 
    textHeader: {
-    fontSize: 22, padding: 20
+    fontSize: 22, padding: 20, fontWeight:'800'
    }
 
 });
