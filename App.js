@@ -17,6 +17,7 @@ import AccountSettings from './src/screens/AccountPage/AccountSettings/AccountSe
 import SupportPage from './src/screens/AccountPage/SupportPage/SupportPage';
 import CndTerms from './src/screens/documentsPage/CndTerms/CndTerms';
 import { Feather } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator, DrawerContentScrollView,DrawerItemList, DrawerItem,} from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
@@ -29,15 +30,31 @@ function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <View style={styles.menuContainer}>
+
+        <View style={{height:'55%', alignItems: 'center'}}>
+          <View style={{borderRadius: 50, backgroundColor: 'black', padding: 10}}><Icon name='person' size={65} color='white'></Icon></View>
+
+          <View style={{padding: 14, alignItems: 'center'}}>
+            <Text>Name and Surname</Text>
+            <Text style={{fontSize: 10}}>gmail Account | Mobile</Text>
+          </View>
+
+            <View style={{flexDirection:'row'}}>
+              <Icon name='directions-car' size={45}></Icon>
+              <View style={{paddingLeft: 10}}>
+                <Text style={{fontSize: 10}}>Number of Trips</Text>
+                <Text >13 Trips</Text>
+              </View>
+            </View>
+        </View>
         <View
           style={[
             styles.menuItemsCard,
             { backgroundColor: '#fff2df', width: width, height: width },
           ]}>
           <>
-            <View
-              style={[styles.circleContainer, { backgroundColor: '#FFC56F' }]}>
-              <Feather travel name="briefcase" size={25} color="#fbae41" />
+            <View>
+              
               <DrawerItem
                 label="Screen1"
                 labelStyle={{ color: '#fbae41', fontSize: 10 }}
@@ -93,7 +110,7 @@ function CustomDrawerContent(props) {
 function UserDrawerPage() {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-      <Drawer.Screen options={{headerShown: false}} name="Home" component={HomePage} />
+      <Drawer.Screen options={{headerShown: false}} name="HomePage" component={HomePage} />
     </Drawer.Navigator>
   );
 }
@@ -129,8 +146,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  menuContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+  },
+  menuItemsCard: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+  },
+  circleContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    padding: 10,
   },
 });
