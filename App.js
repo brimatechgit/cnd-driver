@@ -16,101 +16,25 @@ import AccountPage from './src/screens/AccountPage/AccountPage';
 import AccountSettings from './src/screens/AccountPage/AccountSettings/AccountSettings';
 import SupportPage from './src/screens/AccountPage/SupportPage/SupportPage';
 import CndTerms from './src/screens/documentsPage/CndTerms/CndTerms';
-import { Feather } from '@expo/vector-icons';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator, DrawerContentScrollView,DrawerItemList, DrawerItem,} from '@react-navigation/drawer';
+import CustomDrawerContent from './src/components/customDrawerCompo/CustomDrawer';
+import ManageDocsPage from './src/screens/AccountPage/DrawerPages/ManageDocs/ManageDocs';
+import BankDetailsPage from './src/screens/AccountPage/DrawerPages/BankDetails/BankDetails';
+import ChangePassword from './src/screens/AccountPage/DrawerPages/ChangePassw/ChangePassword';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 
-function CustomDrawerContent(props) {
-  const width = useWindowDimensions().width * 0.3;
 
-  return (
-    <DrawerContentScrollView {...props}>
-      <View style={styles.menuContainer}>
-
-        <View style={{height:'55%', alignItems: 'center'}}>
-          <View style={{borderRadius: 50, backgroundColor: 'black', padding: 10}}><Icon name='person' size={65} color='white'></Icon></View>
-
-          <View style={{padding: 14, alignItems: 'center'}}>
-            <Text>Name and Surname</Text>
-            <Text style={{fontSize: 10}}>gmail Account | Mobile</Text>
-          </View>
-
-            <View style={{flexDirection:'row'}}>
-              <Icon name='directions-car' size={45}></Icon>
-              <View style={{paddingLeft: 10}}>
-                <Text style={{fontSize: 10}}>Number of Trips</Text>
-                <Text >13 Trips</Text>
-              </View>
-            </View>
-        </View>
-        <View
-          style={[
-            styles.menuItemsCard,
-            { backgroundColor: '#fff2df', width: width, height: width },
-          ]}>
-          <>
-            <View>
-              
-              <DrawerItem
-                label="Screen1"
-                labelStyle={{ color: '#fbae41', fontSize: 10 }}
-                onPress={() => {
-                  props.navigation.navigate('Screen1', { body: 'hi' });
-                }}
-              />
-            </View>
-          </>
-          <DrawerItem
-            style={{
-              position: 'absolute',
-              left: 0,
-              width: width,
-              height: width,
-            }}
-            label="Article"
-            labelStyle={{ color: '#609806' }}
-            onPress={() => {
-              props.navigation.navigate('Article', { body: 'article' });
-            }}
-          />
-        </View>
-        <View
-          style={[
-            styles.menuItemsCard,
-            { backgroundColor: '#EFFFD5', width: width, height: width },
-          ]}>
-          <View
-            style={[styles.circleContainer, { backgroundColor: '#b5ff39' }]}>
-            <Feather Medical name="briefcase" size={25} color="#609806" />
-          </View>
-
-          <DrawerItem
-            style={{
-              position: 'absolute',
-              left: 0,
-              width: width,
-              height: width,
-            }}
-            label="Feed"
-            labelStyle={{ color: '#609806' }}
-            onPress={() => {
-              props.navigation.navigate('Feed', { body: 'hello' });
-            }}
-          />
-        </View>
-      </View>
-    </DrawerContentScrollView>
-  );
-}
 
 function UserDrawerPage() {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
       <Drawer.Screen options={{headerShown: false}} name="HomePage" component={HomePage} />
+      <Drawer.Screen options={{headerShown: false}} name="ManageDocsPage" component={ManageDocsPage} />
+      <Drawer.Screen options={{headerShown: false}} name="BankDetailsPage" component={BankDetailsPage} />
+      <Drawer.Screen options={{headerShown: false}} name="ChangePassword" component={ChangePassword} />
     </Drawer.Navigator>
   );
 }
@@ -143,27 +67,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  menuContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-  },
-  menuItemsCard: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  circleContainer: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    padding: 10,
-  },
-});
+
