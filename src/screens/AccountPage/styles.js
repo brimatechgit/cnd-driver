@@ -17,18 +17,23 @@ const styles = StyleSheet.create({
    },
    leadIcon: {
       elevation: 5,
-      left: '20%', backgroundColor: 'white', borderRadius: 50, width: 45, height: 45, justifyContent: 'center', alignItems: 'center'
+       backgroundColor: 'white', borderRadius: 50, width: 45, height: 45, justifyContent: 'center', alignItems: 'center'
    },
    leadIconHeader: {
       left: '20%', backgroundColor: 'white', borderRadius: 50, width: 60, height: 60, justifyContent: 'center', alignItems: 'center'
    },
    textContainer: {
-      justifyContent: 'center', alignItems: 'center', flexDirection: 'row', left: '10%'
+      paddingHorizontal: 10,
+      width: '85%',
+      justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'
    },
 
    text: {
       fontSize: 18
-   }
+   },
+   textHeader: {
+      fontSize: 22, padding: 20, fontWeight:'800'
+     }
 
 });
 
