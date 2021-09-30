@@ -21,11 +21,21 @@ import CustomDrawerContent from './src/components/customDrawerCompo/CustomDrawer
 import ManageDocsPage from './src/screens/AccountPage/DrawerPages/ManageDocs/ManageDocs';
 import BankDetailsPage from './src/screens/AccountPage/DrawerPages/BankDetails/BankDetails';
 import ChangePassword from './src/screens/AccountPage/DrawerPages/ChangePassw/ChangePassword';
+<<<<<<< HEAD
 import SplashPage from './src/screens/LandingPage/splashScreen/splashPage';
 import LandingPage from './src/screens/LandingPage/LandingPage';
 import LoginPage from './src/screens/LoginPage/LoginPage';
 import RegisterPage from './src/screens/RegisterPage/RegisterPage';
 import Verification from './src/screens/LoginPage/Verification/Verification';
+=======
+import PoliciesPage from './src/screens/AccountPage/SupportPage/PoliciesPage/PoliciesPage';
+import TermsAndCo from './src/components/TermsAndC/TermsAndC';
+import TermsPage from './src/screens/AccountPage/SupportPage/TermsPage/TermsPage';
+import ContactPage from './src/screens/AccountPage/SupportPage/ContactUs/ContactPage';
+import ManageVehiclesPage from './src/screens/AccountPage/SupportPage/ManageVehicles/ManageVehiclePage';
+import EmergencyPage from './src/screens/AccountPage/SupportPage/EmergencyContacts/EmergancyPage';
+import PersonalPage from './src/screens/AccountPage/PersonalDetails/PersonalDetPage';
+>>>>>>> 8aedeab476b024b6ced72881b43e686294fd3fe3
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -49,7 +59,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
+<<<<<<< HEAD
       initialRouteName="SplashPage"
+=======
+      initialRouteName="DocumentsPage"
+>>>>>>> 8aedeab476b024b6ced72881b43e686294fd3fe3
        screenOptions={{
         header: CustomNavigationBar,
       }}
@@ -67,6 +81,13 @@ export default function App() {
         <Stack.Screen  name="BankingPage" component={BankingPage} />
         <Stack.Screen  name="ApprovalPage" component={ApprovalPage} />
         <Stack.Screen  name="SupportPage" component={SupportPage} />
+        <Stack.Screen name="PoliciesPage" component={PoliciesPage} />
+        <Stack.Screen name="TermsAndCo" component={TermsAndCo} />
+        <Stack.Screen name="TermsPage" component={TermsPage} />
+        <Stack.Screen name="ContactPage" component={ContactPage} />
+        <Stack.Screen name="PersonalPage" component={PersonalPage} />
+        <Stack.Screen name="ManageVehiclesPage" component={ManageVehiclesPage} />
+        <Stack.Screen name="EmergencyPage" component={EmergencyPage} />
         <Stack.Screen  name="AccountSettings" component={AccountSettings} />
         <Stack.Screen  name="CndTerms" component={CndTerms} />
         <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={AccountPage} />

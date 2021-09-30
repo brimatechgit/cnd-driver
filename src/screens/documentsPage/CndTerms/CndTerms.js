@@ -28,7 +28,7 @@ const CndTerms = props => {
                                         onValueChange={setSelection}
                                         style={styles.checkbox}
                                     />
-                                        <Text style={{fontSize:12}}>I agree to the <Pressable onPress={() => props.navigation.navigate(TermsPage)}><Text style={{fontSize:12, color: 'teal', top: 3}}>Terms & Conditions and Privacy Policy</Text></Pressable></Text>
+                                        <Text style={{fontSize:12}}>I agree to the <Pressable onPress={() => props.navigation.navigate(PoliciesPage)}><Text style={{fontSize:12, color: 'teal', top: 3}}>Terms & Conditions and Privacy Policy</Text></Pressable></Text>
                                     </View>  
 
                             <View style={{height: 15}}></View>

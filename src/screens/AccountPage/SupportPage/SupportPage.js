@@ -1,64 +1,51 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
+import PoliciesPage from './PoliciesPage/PoliciesPage';
+import TermsPage from './TermsPage/TermsPage';
+import ContactPage from './ContactUs/ContactPage';
 
 
-const SupportPage = () => {
+const SupportPage = (props) => {
     return ( 
         <View>
 
-        <View>
-        <Text style={styles.textHeader}>Payment</Text>
-            <View>
-
-                <Card style={{elevation: 10, paddingVertical: 10}}>
-
-                    <View style={{flexDirection: 'row'}}>
-
-                <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
-                    <View style={styles.textContainer}>
-
-                    <Text style={{fontSize: 22}}>Bank Details</Text>
-                    </View>
-                    </View>
-                </Card>
-            </View>
-        </View>
+        
         <View>
             <Text style={styles.textHeader}>Support</Text>
             <View>
 
                 <Card style={{elevation: 10, paddingVertical: 10}}>
 
-                    <View style={{flexDirection: 'row'}}>
+                    <Pressable onPress={() => props.navigation.navigate(PoliciesPage)} style={{flexDirection: 'row'}}>
 
-                <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
-                    <View style={styles.textContainer}>
+                        <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
+                            <View style={styles.textContainer}>
 
-                    <Text style={{fontSize: 22}}>Policies</Text>
-                    </View>
-                    </View>
+                            <Text style={{fontSize: 22}}>Policies</Text>
+                            </View>
+                    </Pressable>
                 </Card>
-                <View style={styles.viewContainer}>
+                <Pressable onPress={() => props.navigation.navigate(TermsPage)} style={styles.viewContainer}>
                     <View style={styles.leadIcon}><Icon name="md-document-attach" size={30}></Icon></View>
                     
                     <View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
                     <Text style={styles.text}>Terms and Conditions</Text>
                     <View style={styles.trailIcon}><Icon name="chevron-forward" size={20}></Icon></View>
                     </View>
-                </View>
+                </Pressable>
 
 
                 <View style={styles.viewContainer}>
                     <View style={styles.leadIcon}><MIcon name="contact-phone" size={30}></MIcon></View>
                     
-<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
-                    <Text style={styles.text}>Contact Us</Text>
-                    <View style={styles.trailIcon}><Icon name="chevron-forward" size={20}></Icon></View>
-                    </View>
+                    <Pressable onPress={() => props.navigation.navigate(ContactPage)} style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
+                        <Text style={styles.text}>Contact Us</Text>
+                        <View style={styles.trailIcon}><Icon name="chevron-forward" size={20}></Icon></View>
+                    </Pressable>
                 </View>
                 <Text style={styles.textHeader}>Other</Text>
                 <View style={styles.viewContainer}>
