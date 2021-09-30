@@ -21,6 +21,11 @@ import CustomDrawerContent from './src/components/customDrawerCompo/CustomDrawer
 import ManageDocsPage from './src/screens/AccountPage/DrawerPages/ManageDocs/ManageDocs';
 import BankDetailsPage from './src/screens/AccountPage/DrawerPages/BankDetails/BankDetails';
 import ChangePassword from './src/screens/AccountPage/DrawerPages/ChangePassw/ChangePassword';
+import SplashPage from './src/screens/LandingPage/splashScreen/splashPage';
+import LandingPage from './src/screens/LandingPage/LandingPage';
+import LoginPage from './src/screens/LoginPage/LoginPage';
+import RegisterPage from './src/screens/RegisterPage/RegisterPage';
+import Verification from './src/screens/LoginPage/Verification/Verification';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -44,12 +49,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="SplashPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}
       >
         <Stack.Screen name="Home" component={UserDrawerPage} />
+        <Stack.Screen name="SplashPage"  component={SplashPage} />
+        <Stack.Screen name="LandingPage"  component={LandingPage} />
+        <Stack.Screen name="LoginPage"  component={LoginPage} />
+        <Stack.Screen name="RegisterPage"  component={RegisterPage} />
+        <Stack.Screen name="Verification"  component={Verification} />
         <Stack.Screen  name="DocumentsPage" component={DocumentsPage} />
         <Stack.Screen  name="PersonalDetailsPage" component={PersonalDetailsPage} />
         <Stack.Screen  name="VehicleDetailsPage" component={VehicleDetailsPage} />

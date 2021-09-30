@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     input: {
         borderBottomColor: 'black',
         borderBottomWidth: 1,
-        width: '80%',
+        width: '95%',
         margin: 5,
         justifyContent: 'flex-start'
     },

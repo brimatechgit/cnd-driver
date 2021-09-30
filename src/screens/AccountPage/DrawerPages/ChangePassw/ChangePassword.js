@@ -14,7 +14,7 @@ const ChangePassword = () => {
     return ( 
         <View style={{padding: 10}}>
             <View style={{alignItems:'center', padding: 15}}>
-                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Change Password</Text>
+                <Text style={{fontSize: 22, fontWeight: '600', color:'black'}}>Change Password</Text>
             </View>
 
             <View>
@@ -89,20 +89,28 @@ const ChangePassword = () => {
  
  
 
-
             <View>
                 <Text style={styles.title}>Your password needs to:</Text>
                 <View style={{padding: 15}}>
-                    <Text style={styles.subTitle}>include at least one number or symbol. </Text>
-                    <Text style={styles.subTitle}>include both lower and upper case characters.</Text>
-                    <Text style={styles.subTitle}>be at least 8 characters long.  </Text>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>include at least one number or symbol. </Text>
+                    </View>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>include both lower and upper case characters </Text>
+                    </View>
+                    <View style={{flexDirection:'row', alignItems:'center'}}>
+                        <View style={styles.circle}></View>
+                        <Text style={styles.subTitle}>be at least 8 characters long. </Text>
+                    </View>
                 </View>
             </View>
 
 
             <Pressable onPress={() => console.log('navi')} style={styles.button}>
                     {/* navigation.navigate(DestinationSearch) */}
-                            <Text style={{color: 'teal', fontSize: 15}}>Change Password</Text>
+                            <Text style={{color: 'black', fontSize: 15, fontWeight:'bold'}}>Change Password</Text>
                         
             </Pressable>
         </View>

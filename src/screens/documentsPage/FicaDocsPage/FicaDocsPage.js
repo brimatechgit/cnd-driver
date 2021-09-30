@@ -48,7 +48,7 @@ const FicaDocsPage = () => {
                                 </View>
                             </View>
                             <View style={{flexDirection: 'row'}}>
-                                <Text style={styles.text}>360 Photo's (vehicle)</Text>
+                                <Text style={styles.text}>Vehicle Photo's </Text>
                                 <View style={styles.iconCircle}>
                                     <Text>
                                         <Icon name="plus" size={15} color="white"></Icon>
@@ -87,8 +87,8 @@ const FicaDocsPage = () => {
                     <Card style={{height: 200,padding:10, elevation: 5, marginTop: 35, borderRadius: 25,  justifyContent: 'center', zIndex: 0}}>
                         <View style={{top: 15}}>
                             <View style={{flexDirection: 'row', paddingBottom:10}}>
-                                <Text style={styles.text}>FICA DOCUMENTS</Text>
-                                <View style={{justifyContent: 'center', left: '270%'}}><Icon name="chevron-down" size={20} color="black"></Icon></View>
+                                <Text style={styles.text}>Screening Documents</Text>
+                                <View style={{justifyContent: 'center', left: '190%'}}><Icon name="chevron-down" size={20} color="black"></Icon></View>
                             </View>
                             <View>
                                 <View style={{flexDirection: 'row'}}>
@@ -129,6 +129,7 @@ const FicaDocsPage = () => {
                 
                 
             </View>
+            <View style={{height: 15}}></View>
             <View style={{justifyContent: 'center', alignItems: 'center', }}>
                 <Pressable style={styles.button} onPress={console.log('here')}>
                     <Text style={{color: 'black', fontSize: 20}}>SUBMIT</Text>

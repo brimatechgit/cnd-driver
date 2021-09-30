@@ -34,7 +34,7 @@ const CndTerms = props => {
                             <View style={{height: 15}}></View>
                         <View style={{ elevation: 5 }}>
                 <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
-                    <Text style={{color: 'teal', fontSize: 15}}>Download</Text>
+                    <Text style={{ fontSize: 15, color:'black'}}>Download</Text>
                 </Pressable>
             </View>      
                     </View> 

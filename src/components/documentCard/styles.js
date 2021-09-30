@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         backgroundColor: 'white',
         width: 310,
-        paddingLeft: 5,
-        height: 65,
+        height: 45,
+        top:'20%',
         elevation: 5,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
+        // flexDirection:'row'
     },
     numCircle: {
         position: 'absolute',

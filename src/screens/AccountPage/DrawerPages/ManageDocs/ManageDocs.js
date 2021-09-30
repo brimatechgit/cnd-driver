@@ -9,7 +9,7 @@ const ManageDocsPage = props => {
     return ( 
         <View style={{flex:1, padding: 15}}>
             <View style={{alignItems:'center', padding: 15}}>
-                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Manage documents</Text>
+                <Text style={{fontSize: 22, fontWeight: '600', color: 'black'}}>Manage documents</Text>
             </View>
 
             <View style={{paddingBottom: 35}}>
@@ -64,7 +64,6 @@ const ManageDocsPage = props => {
                 <View style={styles.textView}>
                     <View>
                         <Text style={{fontSize: 18}}>Owner Affidavit</Text>
-                        <Text style={{fontSize: 8}}>(Only applicable if the vehicle is not your own)</Text>
                     </View>
                     <View style={{flexDirection:'row'}}>
                         

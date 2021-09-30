@@ -59,11 +59,19 @@ const styles = StyleSheet.create({
         elevation: 2
     },
     input: {
-        borderBottomColor: 'black',
-        borderBottomWidth: 2,
+        borderBottomColor: 'teal',
+        borderBottomWidth: 1,
         width: 150,
-        padding: 10,
-        margin: 5,
+        paddingBottom: 5,
+        margin: 10,
+        justifyContent: 'flex-start'
+    },
+    inputLong: {
+        borderBottomColor: 'teal',
+        borderBottomWidth: 1,
+        width: 305,
+        paddingBottom: 5,
+        margin: 10,
         justifyContent: 'flex-start'
     },
 
@@ -74,63 +82,36 @@ const styles = StyleSheet.create({
         padding: 5
     },
     text: {
-        fontSize: 20, justifyContent: 'center',
-        padding: 5
+        fontSize: 22, justifyContent: 'center', color:'teal'
+        
     },
     inputView: {
         flexDirection: 'row', justifyContent: 'space-between'
     },
     button: {
-        elevation: 5,
+        elevation: 3,
         backgroundColor: 'white',
         borderRadius: 50,
-        height: 45,
-        width: 160,
+        padding:10,
+        width: '45%',
         alignItems: 'center',
         justifyContent: 'center',
-        borderColor:'teal',
-        borderWidth: 1
-
+        borderColor: 'teal',
+        borderWidth: 1,
         
     },
 
     inputBottom: {
+        borderBottomColor: 'black',
+        borderBottomWidth: 1,
+        width: 180,
         padding: 5,
         margin: 5,
         justifyContent: 'flex-start'
     },
 
-    dropdown: {
-        borderWidth: 1,
-    },
-
-    title: {
-        fontSize: 22,
-        fontWeight: '600',
-        color: 'teal'
-    },
-
-    subTitle: {
-        fontSize: 12,
-        color: 'red'
-    },
-    circle: {
-        height: 5, width: 5, backgroundColor:'red', borderRadius: 50, marginRight:5  
-    }, 
-    button: {
-        elevation: 5,
-        backgroundColor: 'white',
-        borderRadius: 50,
-        height: 45,
-        width: 160,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor:'black',
-        borderWidth: 1
-
-        
-    },
+    
 
 })
 
-export default styles;
+export default styles
