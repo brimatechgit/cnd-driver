@@ -7,7 +7,7 @@ import styles from './styles';
 
 const EmergencyPage = () => {
     return ( 
-        <View style={{flex:1, padding: 15}}>
+        <View style={{flex:1, padding: 15, alignItems:'center'}}>
             <View style={{alignItems:'center'}}>
                 <Text style={{fontSize: 22, fontWeight: '600'}}>Emergency Contacts</Text>
             </View>
@@ -46,16 +46,20 @@ const EmergencyPage = () => {
                     </View>
                 </View>
             </View>
-
+            
 
             <View style={{justifyContent:'center', alignItems:'center'}}>
-                <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10}}>
+
+
+                
+
+                <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10, elevation:5}}>
                     <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
                         <Text style={{color: 'white', fontSize: 20}}>Dial 10111</Text>
                         <Icon name='chevron-forward-outline' size={18} color='white'></Icon>
                     </Pressable>
                 </View>
-                <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10}}>
+                <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10, elevation: 45}}>
                     <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
                         <Text style={{color: 'white', fontSize: 20}}>Dial 10177</Text>
                         <Icon name='chevron-forward-outline' size={18} color='white'></Icon>

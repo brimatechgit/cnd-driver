@@ -33,6 +33,7 @@ import ContactPage from './src/screens/AccountPage/SupportPage/ContactUs/Contact
 import ManageVehiclesPage from './src/screens/AccountPage/SupportPage/ManageVehicles/ManageVehiclePage';
 import EmergencyPage from './src/screens/AccountPage/SupportPage/EmergencyContacts/EmergancyPage';
 import PersonalPage from './src/screens/AccountPage/PersonalDetails/PersonalDetPage';
+import LoginTerms from './src/screens/LoginPage/loginTerms/loginTerms';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -79,7 +80,9 @@ export default function App() {
         <Stack.Screen name="TermsPage" component={TermsPage} />
         <Stack.Screen name="ContactPage" component={ContactPage} />
         <Stack.Screen name="PersonalPage" component={PersonalPage} />
+        <Stack.Screen name="ChangePassword" component={ChangePassword}/>
         <Stack.Screen name="ManageVehiclesPage" component={ManageVehiclesPage} />
+        <Stack.Screen name="LoginTerms" component={LoginTerms} />
         <Stack.Screen name="EmergencyPage" component={EmergencyPage} />
         <Stack.Screen  name="AccountSettings" component={AccountSettings} />
         <Stack.Screen  name="CndTerms" component={CndTerms} />

@@ -6,6 +6,8 @@ import Modal from "react-native-modal";
 import Icon from 'react-native-vector-icons/Ionicons';
 import AccountPage from '../../screens/AccountPage/AccountPage';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
+import { Card } from 'react-native-paper';
+import Octicons from 'react-native-vector-icons/Octicons';
 
 
 const MapComponent = props => {
@@ -15,9 +17,15 @@ const MapComponent = props => {
   // }
 
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isModalVisibleSOS, setModalVisibleSOS] = useState(false);
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible, );
+
+  
+  };
+  const toggleModalSOS = () => {
+    setModalVisibleSOS(!isModalVisibleSOS, );
 
   
   };
@@ -60,16 +68,16 @@ const MapComponent = props => {
         
             </MapView>
             <TouchableOpacity style={styles.overlay} onPress={toggleModal}>
-              <Icon name='menu' size={55} color='#3e7fc1'></Icon>
+              <Icon name='md-menu-outline' size={55} color='#3e7fc1'></Icon>
             </TouchableOpacity>
             
-            <TouchableOpacity style={styles.overlay2}>
+            <TouchableOpacity onPress={toggleModalSOS} style={styles.overlay2}>
               <Text style={{fontSize: 22, color: 'red'}}>SOS</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.overlay3} onPress={()=> props.navigation.openDrawer()}>
+            {/* <TouchableOpacity style={styles.overlay3} onPress={()=> props.navigation.openDrawer()}>
               <Icon name='person' size={35} color='white'></Icon>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         
         
 
@@ -81,7 +89,7 @@ const MapComponent = props => {
             >
               <View style={{
                 left: '2%',
-                height: '35%',
+                height: '45%',
                 width: '95%',
                 alignItems: 'center',
                 borderColor: '#ccc',
@@ -135,11 +143,102 @@ const MapComponent = props => {
                     // props.navigation.pop();
                     // props.navigation.navigate('Home')
                     props.navigation.navigate('SupportPage')
-                  }} style={{flexDirection: 'row',paddingTop: 10, right: "25%" }}>
+                  }} style={{flexDirection: 'row',paddingTop: 10, right: "22%" }}>
                     <View style={styles.leadIcon}><MIcon name='support-agent' size={32}></MIcon></View>
                     <View style={styles.textStyle}><Text style={{fontSize: 20}}>Support</Text></View>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={()=> {
+                  setModalVisible(!isModalVisible, ), 
+                  //  this.onModalClose,
+                    console.log('toggled')
+                    // props.onModalClose;
+                    // props.navigation.pop();
+                    // props.navigation.navigate('Home')
+                    props.navigation.navigate('ChangePassword')
+                  }} style={{flexDirection: 'row',paddingTop: 10, right:'8%' }}>
+                    <View style={styles.leadIcon}><Icon name='key' size={32}></Icon></View>
+                    <View style={styles.textStyle}><Text style={{fontSize: 20}}>Change Password</Text></View>
+                </TouchableOpacity>
 
+
+            </View>
+
+
+</Modal>
+            <Modal isVisible={isModalVisibleSOS}
+              hasBackdrop={false}
+              onModalClose={toggleModalSOS}
+            >
+              <View style={{
+                left: '2%',
+                height: '50%',
+                width: '95%',
+                alignItems: 'center',
+                borderColor: '#ccc',
+                borderWidth: 1,
+                borderStyle: 'solid',
+                backgroundColor: 'white',
+                elevation: 20,
+                padding: 2,
+                borderRadius: 25,
+              }}> 
+
+<View style={{flex:1, padding: 15, alignItems:'center'}}>
+            <View style={{alignItems:'center'}}>
+                <Text style={{fontSize: 22, fontWeight: '600'}}>Emergency Contacts</Text>
+            </View>
+
+            <View>
+                <View style={{alignItems:'center', paddingTop: 25}}>
+                    <Text style={{fontSize: 18}}>Contact the local authorities</Text>
+                    <Text style={{fontSize: 12}}>Share your trip Information with the authority</Text>
+                </View>
+
+
+                <View>
+                    <Text style={{fontSize: 12, paddingVertical: 15}}>Trip information:</Text>
+
+
+                    <View style={{flexDirection:'row'}}>
+                        <Card style={{borderRadius: 60, marginHorizontal: 10}}><Icon name='car' size={25} style={{padding:10}}></Icon></Card>
+                        <View style={{flexDirection:'row', justifyContent:'space-between', width: '75%', alignItems:'center'}}>
+                            <View>
+                                <Text>453 Unicon Villy</Text>
+                                <Text style={{fontWeight:'bold'}}>Cnd-Bike | SNH 55GP</Text>
+                            </View>
+
+                            <Icon name='chevron-forward-outline' size={25}></Icon>
+                        </View>
+                    </View>
+
+                    <View style={{flexDirection:'row',  marginVertical: 10}}>
+                        <Card style={{borderRadius: 60, marginHorizontal: 10, width: 45, height: 45, alignItems: 'center', justifyContent: 'center',}}><Octicons name='primitive-dot' size={25} style={{top:10}} color='teal'></Octicons></Card>
+                        <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+                            <View>
+                                <Text>Current Location</Text>
+                                <Text style={{fontWeight:'bold'}}>Jetline West</Text>
+                            </View>
+                        </View>
+                    </View>
+                </View>
+            </View>
+            
+
+            <View style={{justifyContent:'center', alignItems:'center'}}>
+
+
+                
+
+                <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10, elevation:5}}>
+                    <Pressable style={styles.button} onPress={() => setModalVisibleSOS(false)}>
+                        <Text style={{color: 'white', fontSize: 20}}>Dial 10111</Text>
+                        <Icon name='chevron-forward-outline' size={18} color='white'></Icon>
+                    </Pressable>
+                </View>
+
+                </View>
+
+                </View>
 
             </View>
 

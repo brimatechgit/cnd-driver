@@ -81,14 +81,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row', justifyContent: 'space-between'
     },
     button: {
-        elevation: 3,
+        elevation: 5,
         backgroundColor: 'white',
         borderWidth:1,
         borderRadius: 50,
-        height: 45,
+        padding: 10,
         width: '45%',
         alignItems: 'center',
         justifyContent: 'center',
+        borderColor:'black'
+        
         
     },
 

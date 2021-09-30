@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        overflow: 'hidden', paddingBottom: 5,
-        padding: 10,
+        paddingBottom: 5,
+        padding: 15,
     },
 
     main: {
@@ -59,19 +59,11 @@ const styles = StyleSheet.create({
         elevation: 2
     },
     input: {
-        borderBottomColor: 'teal',
-        borderBottomWidth: 1,
+        borderBottomColor: 'black',
+        borderBottomWidth: 2,
         width: 150,
-        paddingBottom: 5,
-        margin: 10,
-        justifyContent: 'flex-start'
-    },
-    inputLong: {
-        borderBottomColor: 'teal',
-        borderBottomWidth: 1,
-        width: 305,
-        paddingBottom: 5,
-        margin: 10,
+        padding: 10,
+        margin: 5,
         justifyContent: 'flex-start'
     },
 
@@ -82,54 +74,28 @@ const styles = StyleSheet.create({
         padding: 5
     },
     text: {
-        fontSize: 22, justifyContent: 'center'
-        
+        fontSize: 20, justifyContent: 'center',
+        padding: 5
     },
     inputView: {
-        flexDirection: 'row', justifyContent: 'space-between', color: 'teal'
+        flexDirection: 'row', justifyContent: 'space-between'
     },
     button: {
-     
-        width: '45%',  borderRadius: 25,  borderWidth: 1,   padding:7, marginVertical: 10, backgroundColor:'white',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderColor:'black',
-       
-        
-        
-    },
-    buttonBig: {
         elevation: 3,
         backgroundColor: 'white',
         borderRadius: 50,
         height: 35,
-        width: '45%',
+        width: '55%',
         alignItems: 'center',
         justifyContent: 'center',
-        borderColor: 'teal',
+        borderColor: 'black',
         borderWidth: 1,
         
     },
-
-    inputBottom: {
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-        width: 180,
-        padding: 5,
-        margin: 5,
-        justifyContent: 'flex-start'
-    },
-
-
-    inputCard: {
-        borderBottomColor: 'teal',
-                                        borderWidth: 0,
-                                        width: 60,
-                                        paddingBottom: 5,
-                                        margin: 10,
-    }
-
-    
+    checkbox: {
+        alignSelf: "center",
+        borderColor: 'red'
+      },
 
 })
 

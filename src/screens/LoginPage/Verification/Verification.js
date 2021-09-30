@@ -20,90 +20,97 @@ const Verification = props => {
 
     return ( 
         <View style={{flex:1, padding: 20}}>
-            <Text style={styles.text}>Enter Verification Code</Text>
-            <Text style={{}}>Please enter the 4 digit code sent to you</Text>
+        <Text style={styles.text}>Enter Verification Code</Text>
+        <View style={{height: 15}}></View>
+        <Text style={{}}>An SMS code was sent to</Text>
 
-            <Text style={{letterSpacing:0.9}}>Verification code</Text>
+        <Text style={{fontWeight: 'bold', paddingVertical:10}}>+27 45 935 9064</Text>
 
-            <View style={{height: 15}}></View>
-            <View style={{flexDirection: 'row', right: '3%'}}>
-                <Card style={{elevation: 5, borderTopLeftRadius: 25, borderBottomLeftRadius: 25, margin: 10}}>
-                <View style={{flexDirection: 'row'}}>
-                <TextInput
-                                        style={{borderBottomColor: 'teal',
-                                        borderWidth: 0,
-                                        width: 40,
-                                        paddingBottom: 5,
-                                        margin: 10,
-                                    }}
-                                        onChange={onChangeOTP}
-                                        value={OTP}
-                                        maxLength={1}
-                                        keyboardType='number-pad'
-                                        fontSize={22} 
-                                    />
-                </View>
-                </Card>
+        <Text style={{}}>Edit Mobile Numbers</Text>
 
-                <Card style={{elevation: 5, margin: 10}}>
-                    <View style={{flexDirection: 'row'}}>
-                    <TextInput
-                                            style={styles.inputCard}
-                                            onChange={onChangeOTP2}
-                                            value={OTP2}
-                                            maxLength={1}
-                                            keyboardType='number-pad' 
-                                            fontSize={22}
-                                        />
-                    </View>
-                </Card>
-                <Card style={{elevation: 5, margin: 10}}>
-                    <View style={{flexDirection: 'row'}}>
-                    <TextInput
-                                            style={styles.inputCard}
-                                            onChange={onChangeOTP3}
-                                            value={OTP3}
-                                            maxLength={1}
-                                            keyboardType='number-pad' 
-                                            fontSize={22}
-                                        />
-                    </View>
-                </Card>
-
-                <Card style={{elevation: 5, borderTopRightRadius: 25, borderBottomRightRadius: 25, margin: 10}}>
-                <View style={{flexDirection: 'row'}}>
-                <TextInput
-                                        style={{borderBottomColor: 'teal',
-                                        borderWidth: 0,
-                                        width: 40,
-                                        paddingBottom: 5,
-                                        margin: 10,
-                                    }}
-                                        onChange={onChangeOTP4}
-                                        value={OTP4}
-                                        maxLength={1}
-                                        keyboardType='number-pad'
-                                        fontSize={22}
-                                        
-                                    />
-                </View>
-                </Card>
+        <View style={{height: 15}}></View>
+        <View style={{flexDirection: 'row', right: '3%'}}>
+            <Card style={{elevation: 5, borderTopLeftRadius: 25, borderBottomLeftRadius: 25, margin: 10}}>
+            <View style={{flexDirection: 'row'}}>
+            <TextInput
+                                    style={{borderBottomColor: 'teal',
+                                    borderWidth: 0,
+                                    width: 40,
+                                    paddingBottom: 5,
+                                    margin: 10,
+                                }}
+                                    onChange={onChangeOTP}
+                                    value={OTP}
+                                    maxLength={1}
+                                    keyboardType='number-pad'
+                                    fontSize={22} 
+                                />
             </View>
-            
-            <View style={{height: 15}}></View>
-        
+            </Card>
 
+            <Card style={{elevation: 5, margin: 10}}>
+                <View style={{flexDirection: 'row'}}>
+                <TextInput
+                                        style={styles.inputCard}
+                                        onChange={onChangeOTP2}
+                                        value={OTP2}
+                                        maxLength={1}
+                                        keyboardType='number-pad' 
+                                        fontSize={22}
+                                    />
+                </View>
+            </Card>
+            <Card style={{elevation: 5, margin: 10}}>
+                <View style={{flexDirection: 'row'}}>
+                <TextInput
+                                        style={styles.inputCard}
+                                        onChange={onChangeOTP3}
+                                        value={OTP3}
+                                        maxLength={1}
+                                        keyboardType='number-pad' 
+                                        fontSize={22}
+                                    />
+                </View>
+            </Card>
 
-           
-                    <Pressable style={styles.button} onPress={() => console.log('hi')}>
-                        <Text style={{ fontSize: 22, bottom:2}}>Verify</Text>
-                    </Pressable>
-        
-            
-                      
-                <Text style={{color: 'teal', fontSize: 15}}>Resemd Code: SMS</Text>
-                    
+            <Card style={{elevation: 5, borderTopRightRadius: 25, borderBottomRightRadius: 25, margin: 10}}>
+            <View style={{flexDirection: 'row'}}>
+            <TextInput
+                                    style={{borderBottomColor: 'teal',
+                                    borderWidth: 0,
+                                    width: 40,
+                                    paddingBottom: 5,
+                                    margin: 10,
+                                }}
+                                    onChange={onChangeOTP4}
+                                    value={OTP4}
+                                    maxLength={1}
+                                    keyboardType='number-pad'
+                                    fontSize={22}
+                                    
+                                />
+            </View>
+            </Card>
         </View>
+        
+        <View style={{height: 15}}></View>
+        <Card style={styles.button} onPress={() => console.log('sign in')}>
+                  
+                        <Text style={{fontSize: 15}}>Resend Code</Text>
+                    
+            {/* <Button text='Resend Code' navPage='' navigation={props.navigation}></Button> */}
+            </Card>
+            <View style={{height: 35}}></View>
+                {/* <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5,}}>
+                    <Pressable style={styles.buttonBig} onPress={() => props.navigation.navigate(HomePage)}>
+                        <Text style={{color: 'teal', fontSize: 20}}>Continue</Text>
+                    </Pressable>
+                </View> */}
+
+                <Button text='Continue' navPage='DocumentsPage' navigation={props.navigation}></Button>
+    </View>
+ 
+     
      );
 }
  

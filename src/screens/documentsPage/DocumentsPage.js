@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Pressable } from 'react-native';
 import AppBar from '../../components/AppBar/AppBar';
 import DocumentCard from '../../components/documentCard/documentCard';
+import LoginTerms from '../LoginPage/loginTerms/loginTerms';
 import styles from './ApprovalPage/styles';
 
 const DocumentsPage = ({navigation}) => {
@@ -73,17 +74,20 @@ const DocumentsPage = ({navigation}) => {
                 >
                 </DocumentCard>
             </View>
-            <Text style={{paddingBottom: 30, fontSize: 11,justifyContent: 'center', textAlign: 'center', }}>Agree to our <Text style={{color:'teal'}}> Terms & Conditions</Text></Text>
+            <Text style={{paddingBottom: 30, fontSize: 11,justifyContent: 'center', textAlign: 'center', }}>Agree to our <Pressable onPress={() => navigation.navigate(LoginTerms)} ><Text style={{color:'teal', top:5}}> Terms & Conditions</Text></Pressable></Text>
 
 
 
             <View style={{justifyContent: 'center', alignItems: 'center',elevation: 5}}>
                 <Pressable style={styles.button} onPress={() => navigation.navigate('ApprovalPage')}>
-                    <Text style={{color: 'black', fontSize: 20}}>Submit Registration</Text>
+                    <Text style={{color: 'black', fontSize: 18}}>Submit Registration</Text>
                 </Pressable>
             </View>
             <View style={{height: 20}}></View>
-            <Text style={{ fontSize: 11, justifyContent: 'center', textAlign: 'center'}}>{agreeText}</Text>
+            <View style={{alignItems:'center'}}>
+
+            <Text style={{ fontSize: 11, justifyContent: 'center', textAlign: 'center', width: '65%'}}>{agreeText}</Text>
+            </View>
 
     </View>
         

@@ -55,19 +55,32 @@ const styles = StyleSheet.create({
      textStyle: {
       alignItems: 'center', justifyContent: 'center'
      },
-     button: {
-      elevation: 3,
-      backgroundColor: 'white',
-      borderRadius: 50,
-      height: 45,
-      width: '45%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderColor: 'teal',
-      borderWidth: 1,
-      zIndex: 0.5,
-      color: 'red'
-  },
+  //    button: {
+  //     elevation: 3,
+  //     backgroundColor: 'white',
+  //     borderRadius: 50,
+  //     height: 45,
+  //     width: '45%',
+  //     alignItems: 'center',
+  //     justifyContent: 'center',
+  //     borderColor: 'teal',
+  //     borderWidth: 1,
+  //     zIndex: 0.5,
+  //     color: 'red'
+  // },
+
+  button: {
+    backgroundColor: 'red',
+    borderRadius: 50,
+    height: 45,
+    width: '60%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    padding: 10,
+    paddingVertical:10,
+    
+},
 
   container2: {
     position: 'absolute',

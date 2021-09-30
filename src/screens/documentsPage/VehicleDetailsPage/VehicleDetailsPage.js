@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles';
 import { View, Text, TextInput, ScrollView, Pressable } from 'react-native';
 import { Card, RadioButton } from 'react-native-paper';
+import Modal from "react-native-modal";
 import DropDownPicker from "react-native-custom-dropdown";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
@@ -17,6 +18,16 @@ const VehicleDetailsPage = () => {
     const [moNumber, onChangeNumber] = React.useState(null);
     const [IdNumber, onChangeId] = React.useState(null);
     const [checked, setChecked] = React.useState('No');
+
+    const [isModalVisible, setModalVisible] = React.useState(false);
+    const [isModalVisibleMotor, setModalVisibleMotor] = React.useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!isModalVisible);
+    }
+    const toggleModalMotor = () => {
+        setModalVisible(!isModalVisibleMotor);
+    }
 
     
 
@@ -86,13 +97,12 @@ const VehicleDetailsPage = () => {
                             <Text style={{fontSize: 15}}>CnD-Bike</Text>
                             <View style={{flexDirection: 'row'}}>
                                 <Text style={{fontSize: 9}}>Small Parcels</Text>
-                                <Card style={{backgroundColor: 'grey', marginLeft: 5, borderRadius: 50, padding: 2}}><Text style={{fontSize: 9, color:'white'}}>53x29x56 | 0 - 20KGs</Text></Card>
                             </View>
                         </View>
                             <RadioButton
                                 value="Yes"
                                 status={ checked === 'Yes' ? 'checked' : 'unchecked' }
-                                onPress={() => setChecked('Yes')}
+                                onPress={() => {setChecked('Yes'), setModalVisible(true)}}
                             />
                         </View>
                         <View style={{flexDirection:'row', justifyContent: 'space-between'}}>
@@ -101,13 +111,12 @@ const VehicleDetailsPage = () => {
                             <Text style={{fontSize: 15}}>CnD-Motor</Text>
                             <View style={{flexDirection: 'row'}}>
                                 <Text style={{fontSize: 9}}>Small & Medium Parcels</Text>
-                                <Card style={{backgroundColor: 'grey', marginLeft: 5, borderRadius: 50, padding: 2}}><Text style={{fontSize: 9, color:'white'}}>53x29x56 | 0 - 20KGs</Text></Card>
                             </View>
                         </View>
                         <RadioButton
                             value="No"
                             status={ checked === 'No' ? 'checked' : 'unchecked' }
-                            onPress={() => setChecked('No')}
+                            onPress={() => {setChecked('No'), setModalVisibleMotor(true)}}
                         />
                         </View>
                         </View>
@@ -184,6 +193,70 @@ const VehicleDetailsPage = () => {
                 <View style={styles.textCard}><Text style={{fontSize: 22, paddingLeft: 10}}>Vehicle Details</Text></View>
                 <View style={styles.numCircle}><Text style={{fontSize: 25, color: 'white'}}>3</Text></View>
             </View>
+
+            <Modal isVisible={isModalVisible}
+                            hasBackdrop={false}
+                        >
+                            <View style={{
+                                left: 10,
+                                height: 150,
+                                width: 300,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderColor: '#ccc',
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                backgroundColor: 'white',
+                                elevation: 20,
+                                padding: 15,
+                                borderRadius: 25,
+                            }}>
+                                <Pressable onPress={toggleModal} style={{position:'absolute', top: '5%', right: '4%'}}>
+                                        <Icon name='close'  size={30}></Icon>
+                                </Pressable>
+                                <View style={{padding: 10, alignItems:'center'}}>
+                                    <Text>CnD-Bike Dimensions</Text>
+                                    <View style={{height:15}}></View>
+                                    <Text style={{fontWeight:'bold', letterSpacing:0.9}}>53x29x56 | 0 - 20KGs</Text>
+                                </View> 
+
+                            </View>
+
+
+                    
+                    </Modal>
+            <Modal isVisible={isModalVisibleMotor}
+                            hasBackdrop={false}
+                        >
+                            <View style={{
+                                left: 10,
+                                height: 150,
+                                width: 300,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderColor: '#ccc',
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                backgroundColor: 'white',
+                                elevation: 20,
+                                padding: 15,
+                                borderRadius: 25,
+                            }}>
+                                <Pressable onPress={() => setModalVisibleMotor(false)} style={{position:'absolute', top: '5%', right: '4%'}}>
+                                        <Icon name='close'  size={30}></Icon>
+                                </Pressable>
+                                <View style={{padding: 10, alignItems:'center'}}>
+                                    <Text>CnD-Motor Dimensions</Text>
+                                    <Text style={{fontWeight:'bold', letterSpacing:0.9}}>106x58x112 | 0 - 50KGs</Text>
+                                </View> 
+
+                            </View>
+
+
+                    
+                    </Modal>
+
+
         </View>
      );
 }

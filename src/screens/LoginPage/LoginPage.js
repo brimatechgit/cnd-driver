@@ -7,6 +7,9 @@ import IconIonic from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import Button from '../../components/Button/Button';
 import Verification from './Verification/Verification';
+import LoginTerms from './loginTerms/loginTerms';
+import SvgComponent from './svgComp';
+import Trt from '../../assets/image/try2.svg'
 
 const LoginPage = props => {
 
@@ -28,36 +31,59 @@ const LoginPage = props => {
     return ( 
         <View style={{flex:1, padding: 20}}>
             <View>
-                <Text style={styles.text}>Sign In</Text>
+
+                {/* <SvgComponent /> */}
+
+                <Text style={styles.text}>Please Enter Your Number</Text>
+
+                <View style={{height: 10}}></View>
+                <Text style={{fontSize: 12, width:'65%'}}>
+                    We will send an SMS with a code to 
+                    verify your mobile number
+                </Text>
             </View>
+            <View style={{height: 15}}></View>
+
+            <Card style={{elevation: 5, borderRadius: 25}}>
+            <View style={{flexDirection: 'row'}}>
+
+            <DropDownPicker
+                            style={{width: 80, borderWidth: 0, borderRadius: 25}}
+                                open={open}
+                                value={value}
+                                items={items}
+                                setOpen={setOpen}
+                                setValue={setValue}
+                                setItems={setItems}
+                                placeholder='+27'
+                                />
+            <TextInput
+                                    style={{borderBottomColor: 'teal',
+                                    borderWidth: 0,
+                                    width: 100,
+                                    paddingBottom: 5,
+                                    margin: 10,
+                                right: 250}}
+                                    onChange={onChangeMobile}
+                                    value={mobile}
+                                    placeholder='Mobile' 
+                                    keyboardType='number-pad' 
+                                />
+            </View>
+            </Card>
 
             <View style={{height: 15}}></View>
 
-            <View>
-                <TextInput
-                                    style={styles.inputBottom}
-                                    onChangeText={onChangeCardName}
-                                    value={cardName}
-                                    placeholder='Email'
-                                    keyboardType='default'
-                                />
-
-                <View style={{height: 50}}></View>
-                <TextInput
-                                    style={styles.inputBottom}
-                                    onChangeText={onChangeCardName}
-                                    value={cardName}
-                                    placeholder='Password'
-                                    keyboardType='default'
-                                />
+            <View style={{ flexDirection: 'row',alignItems:'center'}}>
+             {/* I agree to the Terms & Conditions and Privacy Policy */}
+             <CheckBox
+                value={isSelected}
+                onValueChange={setSelection}
+                style={{alignSelf: 'center',}}
+                />
+             <Text style={{fontSize:12, bottom:3}}>I agree to the <Pressable onPress={() => props.navigation.navigate(LoginTerms)}><Text style={{fontSize:12, color: 'teal', top: 3}}>Terms & Conditions</Text></Pressable></Text>
             </View>
-
-            <Pressable onPress={() => props.navigation.navigate(Verification)} style={{padding:5}}>
-                <Text style={{fontSize: 15, color: 'teal'}}>I forgot my password</Text>
-            </Pressable>
-
-           
-            <View style={{height: '15%'}}></View>
+            <View style={{height: 15}}></View>
             <View >
                 <Text style={{fontSize: 15, color: 'teal'}}>Or sign in with Socials</Text>
                 <View style={{flexDirection: 'row'}}>
@@ -75,8 +101,12 @@ const LoginPage = props => {
                     </View> */}
 
 
-            <Button text='Sign In' navPage='DocumentsPage' navigation={props.navigation}></Button>
+            <Button text='Continue' navPage='Verification' navigation={props.navigation}></Button>
+
+
+            <SvgComponent/>
         </View>
+     
      );
 }
  

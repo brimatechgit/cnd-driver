@@ -9,12 +9,12 @@ const ContactPage = () => {
     return ( 
         <View style={{flex:1, padding: 15, alignItems:'center'}}>
             <View style={{alignItems:'center'}}>
-                <Text style={{fontSize: 22, fontWeight: '600'}}>Contact Us</Text>
+                <Text style={{fontSize: 22, fontWeight: '600', fontWeight: 'bold'}}>Contact Us</Text>
             </View>
 
             <View style={{padding: 15}}>
                 <View style={{width: '85%'}}>
-                    <Text style={{fontSize: 18, textAlign:'center', fontWeight: 'bold'}}>Speak directly with a Clickndeliver representative </Text>
+                    <Text style={{fontSize: 18, textAlign:'center'}}>Speak directly with a Clickndeliver representative </Text>
                    
                 </View>
 

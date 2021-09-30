@@ -64,7 +64,10 @@ const FicaDocsPage = () => {
                                 </View>
                             </View>
                             <View style={{flexDirection: 'row'}}>
-                                <Text style={styles.text}>Owner Affidavite</Text>
+                                <View style={{alignItems:'center', }}>
+                                    <Text style={styles.text}>Owner Affidavite</Text>
+                                    <Text style={{fontSize:8, bottom:'5%'}}>(Only applicable if the vehicle is not yours)</Text>
+                                </View>
                                 <View style={styles.iconCircle}>
                                     <Text>
                                         <Icon name="plus" size={15} color="white"></Icon>

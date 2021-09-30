@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, TouchableOpacity } from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
@@ -9,6 +9,7 @@ import TermsPage from './TermsPage/TermsPage';
 import ContactPage from './ContactUs/ContactPage';
 import Modal from "react-native-modal";
 import HomePage from '../../HomePage/HomePage';
+import LandingPage from '../../LandingPage/LandingPage';
 
 
 const SupportPage = (props) => {
@@ -27,8 +28,8 @@ const SupportPage = (props) => {
             <Text style={styles.textHeader}>Support</Text>
             <View>
 
-                <Card style={{elevation: 10, paddingVertical: 10}}>
-
+                
+{/* 
                     <Pressable onPress={() => props.navigation.navigate(PoliciesPage)} style={{flexDirection: 'row'}}>
 
                         <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
@@ -36,8 +37,18 @@ const SupportPage = (props) => {
 
                             <Text style={{fontSize: 22}}>Policies</Text>
                             </View>
-                    </Pressable>
-                </Card>
+
+                            
+                    </Pressable> */}
+           
+                <Pressable onPress={() => props.navigation.navigate(PoliciesPage)} style={styles.viewContainer}>
+                    <View style={styles.leadIcon}><Icon name="md-document-attach" size={30}></Icon></View>
+                    
+                    <View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
+                    <Text style={styles.text}>Policies</Text>
+                    <View style={styles.trailIcon}><Icon name="chevron-forward" size={20}></Icon></View>
+                    </View>
+                </Pressable>
                 <Pressable onPress={() => props.navigation.navigate(TermsPage)} style={styles.viewContainer}>
                     <View style={styles.leadIcon}><Icon name="md-document-attach" size={30}></Icon></View>
                     
@@ -75,7 +86,7 @@ const SupportPage = (props) => {
                         >
                             <View style={{
                                 left: 10,
-                                height: 300,
+                                height: 150,
                                 width: 300,
                                 justifyContent: 'center',
                                 alignItems: 'center',
@@ -87,12 +98,9 @@ const SupportPage = (props) => {
                                 padding: 15,
                                 borderRadius: 25,
                             }}>
-                                <View style={{padding: 10, alignItems:'center'}}>
-                                    <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red'}}>Cancel Your Pick up</Text>
+                                <View style={{padding: 10, alignItems:'center', width:'75%'}}>
+                                    <Text style={{fontSize: 18, fontWeight:'bold',  color:'red', textAlign:'center'}}>Are you sure you want to Log out?</Text>
 
-                                    <Text style={{textAlign:'center'}}>
-                                        Are you sure you want to Log out?
-                                    </Text>
                                 
                                 
                                 </View>
@@ -104,9 +112,9 @@ const SupportPage = (props) => {
                                         <Text style={{color: 'teal', fontSize: 15}}>No</Text>
                                     
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5}]}>
+                                    <TouchableOpacity onPress={() => {props.navigation.navigate(LandingPage),  setModalVisible(false)}} style={[styles.button, {margin:5, borderColor:'red'}]}>
                         
-                                        <Text style={{color: 'teal', fontSize: 15}}>Yes, Cancel</Text>
+                                        <Text style={{color: 'red', fontSize: 15}}>Yes, Log out</Text>
                                     
                                     </TouchableOpacity>
                                 </View>

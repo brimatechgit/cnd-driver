@@ -24,7 +24,7 @@ source={require('../../assets/image/landingLogo.png')} />
             <View style={{flexDirection:'row', }}>
 
                     <Button text='Sign In' navPage='LoginPage' navigation={props.navigation} ></Button>
-                    <Button text='Sign Up' navPage='RegisterPage' navigation={props.navigation} ></Button>
+                    <Button text='Register' navPage='RegisterPage' navigation={props.navigation} ></Button>
 
             </View>
         </View>

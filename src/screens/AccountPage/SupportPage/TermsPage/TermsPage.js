@@ -1,5 +1,6 @@
 import React from 'react';
 import { View,Text,TextInput, Pressable} from 'react-native';
+import { Card } from 'react-native-paper';
 import styles from './styles';
 
 
@@ -9,7 +10,7 @@ const TermsPage = () => {
 
     return ( 
         <View style={{flex:1, padding: 15}}>
-            <View style={{alignItems:'center'}}>
+            <View style={{alignItems:'center', padding:10}}>
                 <Text style={{fontSize: 22, fontWeight: '600'}}>Terms & Conditions</Text>
             </View>
 
@@ -17,11 +18,11 @@ const TermsPage = () => {
                 <Text>{terms}</Text>
             </View>
 
-            <View style={{justifyContent: 'center',  paddingTop: 15,}}>
-                <Pressable style={styles.button} >
-                    <Text style={{color: 'black', fontSize: 20}}>Download</Text>
-                </Pressable>
-            </View>
+            <View style={{height: 35}}></View>
+                <Card style={styles.button} >
+                    <Text style={{color: 'black', fontSize: 20, bottom:'5%'}}>Download</Text>
+                </Card>
+         
 
         </View>
      );

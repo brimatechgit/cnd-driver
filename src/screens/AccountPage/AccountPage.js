@@ -29,18 +29,14 @@ const AccountPage = props => {
             <View>
                 <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>General Settings</Text>
                 <View>
-
-                    <Card style={{elevation: 10, paddingVertical: 10}}>
-
-                        <View style={{flexDirection: 'row'}}>
-
-                    <View style={styles.leadIcon}><Icon name="car" size={30}></Icon></View>
+                    <Pressable onPress={() => console.log('lol')} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                        <View style={styles.leadIcon}><Icon name="car" size={30}></Icon></View>
                         <View style={styles.textContainer}>
 
-                        <Text style={styles.text}>My Bookings</Text>
+                        <Text>My Bookings</Text>
+                        <Icon name="chevron-forward" size={20}></Icon>
                         </View>
-                        </View>
-                    </Card>
+                    </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(ManageVehiclesPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
                         <View style={styles.leadIcon}><Icon name="stats-chart" size={30}></Icon></View>
                         <View style={styles.textContainer}>
@@ -50,7 +46,7 @@ const AccountPage = props => {
                         </View>
                     </Pressable>
                     
-                    <Pressable onPress={() => props.navigation.navigate(EmergencyPage)} style={{padding: 10, flexDirection: 'row', elevation: 10}}>
+                    <Pressable onPress={() => props.navigation.navigate(EmergencyPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
                         <View style={styles.leadIcon}><MaterialCommunityIcons name="alarm-light" size={30}></MaterialCommunityIcons></View>
                         <View style={styles.textContainer}>
                             <Text>Emergency Contact</Text>
@@ -62,18 +58,14 @@ const AccountPage = props => {
             <View>
                 <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>Account Settings</Text>
                 <View>
-
-                    <Card style={{elevation: 10, paddingVertical: 10}}>
-
-                        <Pressable onPress={() => props.navigation.navigate(PersonalPage)}  style={{flexDirection: 'row'}}>
-
-                    <View style={styles.leadIcon}><Icon name="car" size={30}></Icon></View>
+                    <Pressable onPress={() => props.navigation.navigate(PersonalPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                        <View style={styles.leadIcon}><Icon name="person" size={30}></Icon></View>
                         <View style={styles.textContainer}>
-                            <Text style={styles.text}>Personal Details</Text>
-                            <Icon name="chevron-forward" size={20}></Icon>
+
+                        <Text>Personal Details</Text>
+                        <Icon name="chevron-forward" size={20}></Icon>
                         </View>
-                        </Pressable>
-                    </Card>
+                    </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(ManageDocsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
                         <View style={styles.leadIcon}><Icon name="stats-chart" size={30}></Icon></View>
                         <View style={styles.textContainer}>
@@ -85,21 +77,16 @@ const AccountPage = props => {
                 </View>
             </View>
             <View>
-        <Text style={styles.textHeader}>Payment</Text>
-            <Pressable onPress={() => props.navigation.navigate(BankDetailsPage)}>
+        <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>Payment</Text>
 
-                
-
-                    <View style={{flexDirection: 'row'}}>
-
-                <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
+        <Pressable onPress={() => props.navigation.navigate(BankDetailsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                        <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
                         <View style={styles.textContainer}>
-                            <Text style={{fontSize: 22}}>Bank Details</Text>
-                            <Icon name="chevron-forward" size={20}></Icon>
+
+                        <Text>Bank Details</Text>
+                        <Icon name="chevron-forward" size={20}></Icon>
                         </View>
-                </View>
-        
-            </Pressable >
+                    </Pressable>
         </View>
         </View>
      

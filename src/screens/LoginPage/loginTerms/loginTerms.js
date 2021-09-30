@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Card } from 'react-native-paper';
 import styles from './styles';
 
-const CndTerms = props => {
+const LoginTerms = props => {
 
     const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu. Id consectetur purus ut faucibus. Ridiculus mus mauris vitae ultricies. Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. In ante metus dictum at tempor commodo. Duis at consectetur lorem donec massa. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Quam elementum pulvinar etiam non quam. Etiam sit amet nisl purus. Faucibus ornare suspendisse sed nisi lacus. Blandit massa enim nec dui nunc mattis enim ut tellus. Porta lorem mollis aliquam ut. At urna condimentum mattis pellentesque.';
     const [isSelected, setSelection] = useState(false);
@@ -14,9 +14,9 @@ const CndTerms = props => {
          
         <View style={styles.container}>
            
-                
+           <Text style={{fontSize: 22, paddingLeft: 10, textAlign: 'center'}}>Terms & Conditions</Text>
                         
-                    <View style={{top: '20%', left:0}}>
+                    <View style={{paddingTop: 15}}>
                             
                         <Text style={{fontSize: 15,letterSpacing: 0.5}}>{lorem}</Text>
                             <View style={{height: 15}}></View>
@@ -34,7 +34,7 @@ const CndTerms = props => {
                             <View style={{height: 15}}></View>
                         <View style={{ elevation: 5 }}>
                             <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
-                                <Text style={{ fontSize: 15, color:'black'}}>Download</Text>
+                                <Text style={{ fontSize: 15, color:'black', bottom:'5%'}}>Download</Text>
                             </Pressable>
                         </View>      
                     </View> 
@@ -49,10 +49,10 @@ const CndTerms = props => {
                 </Pressable>
             </View> */}
 
-            <View style={styles.main}>
+            {/* <View style={styles.main}>
                 <View style={styles.textCard}><Text style={{fontSize: 22, paddingLeft: 10, textAlign: 'center'}}>Terms & Conditions</Text></View>
-                <View style={styles.numCircle}><Text style={{fontSize: 25, color: 'white'}}>5</Text></View>
-            </View>
+              
+            </View> */}
 
 
         </View>
@@ -61,4 +61,4 @@ const CndTerms = props => {
      );
 }
  
-export default CndTerms;
+export default LoginTerms;
