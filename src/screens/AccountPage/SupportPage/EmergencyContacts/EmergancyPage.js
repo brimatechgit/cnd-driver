@@ -13,8 +13,10 @@ const EmergencyPage = () => {
             </View>
 
             <View>
-                <Text style={{fontSize: 22}}>Contact the local authorities</Text>
-                <Text style={{fontSize: 12}}>Share your trip Information with the authority</Text>
+                <View style={{alignItems:'center', paddingTop: 25}}>
+                    <Text style={{fontSize: 18}}>Contact the local authorities</Text>
+                    <Text style={{fontSize: 12}}>Share your trip Information with the authority</Text>
+                </View>
 
 
                 <View>
@@ -50,13 +52,13 @@ const EmergencyPage = () => {
                 <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10}}>
                     <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
                         <Text style={{color: 'white', fontSize: 20}}>Dial 10111</Text>
-                        <Icon name='chevron-forward-outline' size={18}></Icon>
+                        <Icon name='chevron-forward-outline' size={18} color='white'></Icon>
                     </Pressable>
                 </View>
                 <View style={{justifyContent: 'center',alignItems:'center', width: 300, paddingVertical: 10}}>
                     <Pressable style={styles.button} onPress={() => props.navigation.pop()}>
                         <Text style={{color: 'white', fontSize: 20}}>Dial 10177</Text>
-                        <Icon name='chevron-forward-outline' size={18}></Icon>
+                        <Icon name='chevron-forward-outline' size={18} color='white'></Icon>
                     </Pressable>
                 </View>
             </View>

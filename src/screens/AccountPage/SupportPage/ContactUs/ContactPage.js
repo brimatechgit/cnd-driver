@@ -7,16 +7,18 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const ContactPage = () => {
     return ( 
-        <View style={{flex:1, padding: 15}}>
+        <View style={{flex:1, padding: 15, alignItems:'center'}}>
             <View style={{alignItems:'center'}}>
                 <Text style={{fontSize: 22, fontWeight: '600'}}>Contact Us</Text>
             </View>
 
             <View style={{padding: 15}}>
-                <Text style={{fontSize: 18}}>Speak directly with a </Text>
-                <Text style={{fontSize: 18}}>Clickndeliver representative</Text>
+                <View style={{width: '85%'}}>
+                    <Text style={{fontSize: 18, textAlign:'center', fontWeight: 'bold'}}>Speak directly with a Clickndeliver representative </Text>
+                   
+                </View>
 
-                <View style={{flexDirection:'row', paddingVertical: 10}}>
+                <View style={{flexDirection:'row', paddingVertical: 10, alignItems:'center', justifyContent:'center'}}>
                     <Card style={{elevation: 5, padding: 22, borderRadius: 60, margin: 5}}>
                         <Icon name='call' size={22}></Icon>
                     </Card>

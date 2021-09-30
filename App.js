@@ -62,8 +62,8 @@ export default function App() {
       }}
       >
         <Stack.Screen name="Home" component={UserDrawerPage} />
-        <Stack.Screen name="SplashPage"  component={SplashPage} />
-        <Stack.Screen name="LandingPage"  component={LandingPage} />
+        <Stack.Screen options={{headerShown: false}} name="SplashPage"  component={SplashPage} />
+        <Stack.Screen options={{headerShown: false}} name="LandingPage"  component={LandingPage} />
         <Stack.Screen name="LoginPage"  component={LoginPage} />
         <Stack.Screen name="RegisterPage"  component={RegisterPage} />
         <Stack.Screen name="Verification"  component={Verification} />

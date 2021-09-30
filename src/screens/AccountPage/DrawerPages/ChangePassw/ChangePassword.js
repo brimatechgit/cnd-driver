@@ -18,7 +18,7 @@ const ChangePassword = () => {
             </View>
 
             <View>
-                <Text style={{fontWeight:'100', padding: 5, color: 'teal'}}>Confirm your current password</Text>
+                <Text style={{fontWeight:'100', padding: 5}}>Confirm your current password</Text>
                     <Card style={{elevation: 10, borderRadius: 25, padding:2, marginVertical: 15}}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                             <TextInput
@@ -42,7 +42,7 @@ const ChangePassword = () => {
 
             </View>
             <View>
-                <Text style={{fontWeight:'100', padding: 5, color: 'teal'}}>Enter your new password</Text>
+                <Text style={{fontWeight:'100', padding: 5,}}>Enter your new password</Text>
                     <Card style={{elevation: 10, borderRadius: 25, marginVertical: 15, padding:2,}}>
                             <View style={{flexDirection: 'row',  justifyContent: 'space-between', alignItems: 'center'}}>
                             <TextInput
