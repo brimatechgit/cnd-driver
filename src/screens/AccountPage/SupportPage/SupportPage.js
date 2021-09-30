@@ -7,9 +7,18 @@ import styles from './styles';
 import PoliciesPage from './PoliciesPage/PoliciesPage';
 import TermsPage from './TermsPage/TermsPage';
 import ContactPage from './ContactUs/ContactPage';
+import Modal from "react-native-modal";
+import HomePage from '../../HomePage/HomePage';
 
 
 const SupportPage = (props) => {
+
+    const [isModalVisible, setModalVisible] = React.useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!isModalVisible);
+    }
+
     return ( 
         <View>
 
@@ -51,13 +60,62 @@ const SupportPage = (props) => {
                 <View style={styles.viewContainer}>
                     <View style={styles.leadIcon}><MIcon name="logout" size={30} color='red'></MIcon></View>
                     
-                    <View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
+                    <Pressable onPress={toggleModal} style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', padding: 20}}>
                         <Text style={styles.text}>Logout</Text>
                         <View style={styles.trailIcon} ><Icon name="chevron-forward" size={20}></Icon></View>
-                    </View>
+                    </Pressable>
                 </View>
             </View>
         </View>
+
+
+
+        <Modal isVisible={isModalVisible}
+                            hasBackdrop={false}
+                        >
+                            <View style={{
+                                left: 10,
+                                height: 300,
+                                width: 300,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderColor: '#ccc',
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                backgroundColor: 'white',
+                                elevation: 20,
+                                padding: 15,
+                                borderRadius: 25,
+                            }}>
+                                <View style={{padding: 10, alignItems:'center'}}>
+                                    <Text style={{fontSize: 18, fontWeight:'bold', paddingVertical: 10, color:'red'}}>Cancel Your Pick up</Text>
+
+                                    <Text style={{textAlign:'center'}}>
+                                        Are you sure you want to Log out?
+                                    </Text>
+                                
+                                
+                                </View>
+
+                                <View style={{flexDirection:'row'}}>
+
+                                    <TouchableOpacity onPress={toggleModal} style={[styles.button, {margin:5}]}>
+                        
+                                        <Text style={{color: 'teal', fontSize: 15}}>No</Text>
+                                    
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => {props.navigation.navigate(HomePage),  setModalVisible(false)}} style={[styles.button, {margin:5}]}>
+                        
+                                        <Text style={{color: 'teal', fontSize: 15}}>Yes, Cancel</Text>
+                                    
+                                    </TouchableOpacity>
+                                </View>
+
+                            </View>
+
+
+                    
+                    </Modal>
     </View>
  
      );
