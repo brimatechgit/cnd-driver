@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,TextInput } from 'react-native';
+import { View, Text,TextInput, Image } from 'react-native';
 import styles from './styles';
 
 const BankDetailsPage = () => {
@@ -13,8 +13,12 @@ const BankDetailsPage = () => {
 
     return ( 
         <View style={{flex:1, padding: 15}}>
-            <View style={{alignItems:'center', padding: 15}}>
-                <Text style={{fontSize: 22, fontWeight: '600', color: 'teal'}}>Bank Details</Text>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../../assets/image/BankingDetails.png')} />
+                <Text style={{fontSize: 22, fontWeight: '600'}}>Bank Details</Text>
             </View>
 
             <View style={{padding: 10}}>

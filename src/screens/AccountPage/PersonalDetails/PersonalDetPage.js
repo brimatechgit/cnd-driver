@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable } from 'react-native';
+import { View, Text, TextInput, Pressable,Image } from 'react-native';
 import { Card } from 'react-native-paper';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import DropDownPicker from 'react-native-dropdown-picker';
@@ -20,22 +20,39 @@ const PersonalPage = () => {
 
     
 
-
+    const [placeVal, setPlaceVals] = useState('Apartment Name & unit No');
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
     const [items, setItems] = React.useState([
         {label: 'Complex / Estate', value: 'Complex'},
         {label: 'Apartment', value: 'Apartment'},
-        {label: 'Home', value: 'Home'}
+        {label: 'House', value: 'House'},
+        {label: 'Office', value: 'Office'},
+        {label: 'Hotel/B&B', value: 'Hotel/B&B'}
       ]);
 
     const [modalVisible, setModalVisible] = useState(false);
+    const [complex, onChangeComplex] = React.useState('');
+    const [streetName, onChangeStreetName] = React.useState('');
 
-
+    const changeVals = () => {
+        if(value == 'Complex'){
+            setPlaceVals('Complex Name & unit No');
+        } else if( value == 'Apartment') {
+            setPlaceVals('Apartment Name & unit No');
+        } else if(value == 'Office') {
+            setPlaceVals('Company name');
+        } else if(value == 'Hotel/B&B') {
+            setPlaceVals('Hotel name & room no');
+        }
+      }
     return ( 
         <View style={styles.container}>
             <View style={{alignItems:'center', flexDirection: 'row', left: '10%'}}>
-                <Ionicons name='person' size={22} style={{paddingHorizontal: 10, }}></Ionicons>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../assets/image/AccountSettings.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600'}}>Personal Details</Text>
             </View>
             <View>
@@ -92,21 +109,66 @@ const PersonalPage = () => {
         padding: 5}}>Residential Details</Text></View>
 
                     <View style={styles.form}>
-                        <View>
+                    <View>
                             <Text style={{fontSize: 15, padding: 10}}>Building Type</Text>
                             
 
                             <DropDownPicker
+                            dropDownDirection={'BOTTOM'}
                                 open={open}
                                 value={value}
                                 items={items}
                                 setOpen={setOpen}
                                 setValue={setValue}
                                 setItems={setItems}
+                                placeholder='Apartment'
+                                style={styles.dropdown}
+                                onChangeValue={changeVals}
                                 />
 
                         </View>
-                        <ModalTester></ModalTester>
+                        <View>
+
+                        <View >
+                            {
+
+                                (value != 'House') ? <TextInput
+                                    style={styles.inputBottom}
+                                    onChangeText={onChangeComplex}
+                                    value={complex}
+                                    placeholder={placeVal}
+                                /> : null
+                                
+                            }
+
+                        </View>
+
+                        <View>
+                            {/* <Text>Street Name</Text> */}
+                            <TextInput
+                                style={styles.inputBottom}
+                                onChangeText={onChangeStreetName}
+                                value={streetName}
+                                placeholder='Street Name & Street no'  
+                            />
+
+                        </View>
+
+                        {/* <View >
+                            {/* //should navigate to google search page 
+                            {/* <Text>Address</Text> 
+                            <TextInput
+                                style={styles.inputBottom}
+                                onChangeText={onChangeStreetNumber}
+                                value={streetNumber}
+                                placeholder='Street No'  
+                            />
+                        </View> */}
+                    
+
+
+                        </View>
+                        {/* <ModalTester title={value}></ModalTester> */}
                     </View>
                 </Card>
                 

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styles from './styles';
-import { View, Text, Pressable, TouchableOpacity } from 'react-native';
+import { View, Text, Pressable, TouchableOpacity,Image } from 'react-native';
 import MapView,  {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import Modal from "react-native-modal";
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -68,11 +68,17 @@ const MapComponent = props => {
         
             </MapView>
             <TouchableOpacity style={styles.overlay} onPress={toggleModal}>
-              <Icon name='md-menu-outline' size={55} color='#3e7fc1'></Icon>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/MENU.png')} />
             </TouchableOpacity>
             
             <TouchableOpacity onPress={toggleModalSOS} style={styles.overlay2}>
-              <Text style={{fontSize: 22, color: 'red'}}>SOS</Text>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/SOS.png')} />
             </TouchableOpacity>
 
             {/* <TouchableOpacity style={styles.overlay3} onPress={()=> props.navigation.openDrawer()}>
@@ -119,7 +125,16 @@ const MapComponent = props => {
                 }
                   } style={{flexDirection: 'row',paddingTop: 10, right: "10%" }}>
                     {/* <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View> */}
-                    <View style={styles.leadIcon}><Icon name='settings' size={32}></Icon></View>
+                    
+                    
+                    
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/GeneralSetting.png')} />
+                    
+                    
+                    
                     <View style={styles.textStyle}><Text style={{fontSize: 20, textAlign: 'center'}}>General Settings</Text></View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=> {
@@ -132,7 +147,10 @@ const MapComponent = props => {
                     props.navigation.navigate(AccountPage)
                   
                   }} style={{flexDirection: 'row',paddingTop: 10, right: "10%" }}>
-                    <View style={styles.leadIcon}><Icon name='person' size={32}></Icon></View>
+                 <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/AccountSettings.png')} />
                     <View style={styles.textStyle}><Text style={{fontSize: 20}}>Account Settings</Text></View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=> {
@@ -144,7 +162,13 @@ const MapComponent = props => {
                     // props.navigation.navigate('Home')
                     props.navigation.navigate('SupportPage')
                   }} style={{flexDirection: 'row',paddingTop: 10, right: "22%" }}>
-                    <View style={styles.leadIcon}><MIcon name='support-agent' size={32}></MIcon></View>
+                <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/SupportSettings.png')} />
+                    
+                    
+                    
                     <View style={styles.textStyle}><Text style={{fontSize: 20}}>Support</Text></View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=> {
@@ -156,7 +180,10 @@ const MapComponent = props => {
                     // props.navigation.navigate('Home')
                     props.navigation.navigate('ChangePassword')
                   }} style={{flexDirection: 'row',paddingTop: 10, right:'8%' }}>
-                    <View style={styles.leadIcon}><Icon name='key' size={32}></Icon></View>
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/changePass.png')} />
                     <View style={styles.textStyle}><Text style={{fontSize: 20}}>Change Password</Text></View>
                 </TouchableOpacity>
 

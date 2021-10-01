@@ -15,9 +15,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: '82%',
         bottom: '28%',
-        borderRadius: 50,
         margin: 5,
-        backgroundColor: 'white',
       },
       overlay3: {
         position: 'absolute',
@@ -31,15 +29,11 @@ const styles = StyleSheet.create({
         alignItems:'center',
       },
       overlay2: {
-          width: 55,
-          height: 55,
           alignItems: 'center',
           justifyContent: 'center',
         position: 'absolute',
         left: '82%',
         bottom: '18%',
-        borderRadius: 50,
-        backgroundColor: 'rgba(255, 255, 255, 1)',
       },
       iconContainer: {
         width: 50,

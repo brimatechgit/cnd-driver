@@ -18,18 +18,34 @@ const DetailsCard = props => {
 
     
 
-
+    const [placeVal, setPlaceVals] = useState('Apartment Name & unit No');
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
     const [items, setItems] = React.useState([
         {label: 'Complex / Estate', value: 'Complex'},
         {label: 'Apartment', value: 'Apartment'},
-        {label: 'Home', value: 'Home'}
+        {label: 'House', value: 'House'},
+        {label: 'Office', value: 'Office'},
+        {label: 'Hotel/B&B', value: 'Hotel/B&B'}
       ]);
+
+      const [complex, onChangeComplex] = React.useState('');
+      const [streetName, onChangeStreetName] = React.useState('');
+
 
     const [modalVisible, setModalVisible] = useState(false);
 
-
+    const changeVals = () => {
+        if(value == 'Complex'){
+            setPlaceVals('Complex Name & unit No');
+        } else if( value == 'Apartment') {
+            setPlaceVals('Apartment Name & unit No');
+        } else if(value == 'Office') {
+            setPlaceVals('Company name');
+        } else if(value == 'Hotel/B&B') {
+            setPlaceVals('Hotel name & room no');
+        }
+      }
 
 
     return ( 
@@ -90,7 +106,7 @@ const DetailsCard = props => {
         padding: 5}}>Residential Details</Text></View>
 
                     <View style={styles.form}>
-                        <View>
+                        {/* <View>
                             <Text style={{fontSize: 15, padding: 10}}>Building Type</Text>
                             
 
@@ -104,7 +120,67 @@ const DetailsCard = props => {
                                 />
 
                         </View>
-                        <DetailsClass></DetailsClass>
+                        <DetailsClass></DetailsClass> */}
+
+<View>
+                            <Text style={{fontSize: 15, padding: 10}}>Building Type</Text>
+                            
+
+                            <DropDownPicker
+                            dropDownDirection={'BOTTOM'}
+                                open={open}
+                                value={value}
+                                items={items}
+                                setOpen={setOpen}
+                                setValue={setValue}
+                                setItems={setItems}
+                                placeholder='Apartment'
+                                style={styles.dropdown}
+                                onChangeValue={changeVals}
+                                />
+
+                        </View>
+                        <View>
+
+                        <View >
+                            {
+
+                                (value != 'House') ? <TextInput
+                                    style={styles.inputBottom}
+                                    onChangeText={onChangeComplex}
+                                    value={complex}
+                                    placeholder={placeVal}
+                                /> : null
+                                
+                            }
+
+                        </View>
+
+                        <View>
+                            {/* <Text>Street Name</Text> */}
+                            <TextInput
+                                style={styles.inputBottom}
+                                onChangeText={onChangeStreetName}
+                                value={streetName}
+                                placeholder='Street Name & Street no'  
+                            />
+
+                        </View>
+
+                        {/* <View >
+                            {/* //should navigate to google search page 
+                            {/* <Text>Address</Text> 
+                            <TextInput
+                                style={styles.inputBottom}
+                                onChangeText={onChangeStreetNumber}
+                                value={streetNumber}
+                                placeholder='Street No'  
+                            />
+                        </View> */}
+                    
+
+
+                        </View>
                     </View>
                 </Card>
                 

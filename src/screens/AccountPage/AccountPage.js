@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, Image } from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
@@ -30,7 +30,12 @@ const AccountPage = props => {
                 <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>General Settings</Text>
                 <View>
                     <Pressable onPress={() => console.log('lol')} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="car" size={30}></Icon></View>
+                        
+                        
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/MyBookings.png')} />
                         <View style={styles.textContainer}>
 
                         <Text>My Bookings</Text>
@@ -38,7 +43,10 @@ const AccountPage = props => {
                         </View>
                     </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(ManageVehiclesPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="stats-chart" size={30}></Icon></View>
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/ManageVehicle.png')} />
                         <View style={styles.textContainer}>
 
                         <Text>Manage Vehicles</Text>
@@ -47,7 +55,10 @@ const AccountPage = props => {
                     </Pressable>
                     
                     <Pressable onPress={() => props.navigation.navigate(EmergencyPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><MaterialCommunityIcons name="alarm-light" size={30}></MaterialCommunityIcons></View>
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/Emergency.png')} />
                         <View style={styles.textContainer}>
                             <Text>Emergency Contact</Text>
                             <Icon name="chevron-forward" size={20}></Icon>
@@ -59,7 +70,10 @@ const AccountPage = props => {
                 <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>Account Settings</Text>
                 <View>
                     <Pressable onPress={() => props.navigation.navigate(PersonalPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="person" size={30}></Icon></View>
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/AccountSettings.png')} />
                         <View style={styles.textContainer}>
 
                         <Text>Personal Details</Text>
@@ -67,7 +81,10 @@ const AccountPage = props => {
                         </View>
                     </Pressable>
                     <Pressable onPress={() => props.navigation.navigate(ManageDocsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><Icon name="stats-chart" size={30}></Icon></View>
+                    <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/Document2.png')} />
                         <View style={styles.textContainer}>
 
                         <Text>Manage Documents</Text>
@@ -80,7 +97,10 @@ const AccountPage = props => {
         <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>Payment</Text>
 
         <Pressable onPress={() => props.navigation.navigate(BankDetailsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
-                        <View style={styles.leadIcon}><MIcon name="privacy-tip" size={30}></MIcon></View>
+        <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../assets/image/BankingDetails.png')} />
                         <View style={styles.textContainer}>
 
                         <Text>Bank Details</Text>

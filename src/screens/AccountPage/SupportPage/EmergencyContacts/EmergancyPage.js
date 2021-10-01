@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,Text, Pressable} from 'react-native';
+import { View,Text, Pressable, Image} from 'react-native';
 import { Card } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Octicons from 'react-native-vector-icons/Octicons';
@@ -7,8 +7,12 @@ import styles from './styles';
 
 const EmergencyPage = () => {
     return ( 
-        <View style={{flex:1, padding: 15, alignItems:'center'}}>
-            <View style={{alignItems:'center'}}>
+        <View style={{flex:1, padding: 15, alignItems:'center', }}>
+            <View style={{alignItems:'center', flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../../assets/image/Emergency1.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600'}}>Emergency Contacts</Text>
             </View>
 

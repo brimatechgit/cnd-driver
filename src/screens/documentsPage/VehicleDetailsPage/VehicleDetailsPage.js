@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import { View, Text, TextInput, ScrollView, Pressable } from 'react-native';
+import { View, Text, TextInput, ScrollView, Pressable, Image } from 'react-native';
 import { Card, RadioButton } from 'react-native-paper';
 import Modal from "react-native-modal";
 import DropDownPicker from "react-native-custom-dropdown";
@@ -9,7 +9,7 @@ import MIcon from 'react-native-vector-icons/MaterialIcons';
 // import styles from './styles';
 
 
-const VehicleDetailsPage = () => {
+const VehicleDetailsPage = (props) => {
 
     const [text, onChangeText] = React.useState("");
     const [resAdr, onChangeResAdr] = React.useState("");
@@ -92,7 +92,12 @@ const VehicleDetailsPage = () => {
                         <Text style={styles.radioText}>Vehicle Category</Text>
                     <View style={styles.rowView}>
                         <View style={{flexDirection:'row', justifyContent: 'space-between'}}>
-                        <MIcon name='bike-scooter' size={30}></MIcon>
+                        <Image 
+style={{height:35, width:35 }}
+  resizeMode = 'contain'
+source={require('../../../assets/image/CnDBike.png')} />
+                        
+                        
                         <View style={{right: '55%'}}>
                             <Text style={{fontSize: 15}}>CnD-Bike</Text>
                             <View style={{flexDirection: 'row'}}>
@@ -106,7 +111,14 @@ const VehicleDetailsPage = () => {
                             />
                         </View>
                         <View style={{flexDirection:'row', justifyContent: 'space-between'}}>
-                        <MIcon name='bike-scooter' size={30}></MIcon>
+                        
+                        
+                        <Image 
+style={{height:35, width:35 }}
+  resizeMode = 'contain'
+source={require('../../../assets/image/CnDMotor.png')} />
+                        
+                        
                         <View style={{}}>
                             <Text style={{fontSize: 15}}>CnD-Motor</Text>
                             <View style={{flexDirection: 'row'}}>
@@ -152,7 +164,12 @@ const VehicleDetailsPage = () => {
                                         <Text style={{fontSize:13}}>Added Vehicles:</Text>
                             
                                         <View style={{flexDirection: 'row', justifyContent: 'space-between', margin:10}}>
-                                            <MIcon name='bike-scooter' size={30}></MIcon>
+                                        <Image 
+style={{height:35, width:35 }}
+  resizeMode = 'contain'
+source={require('../../../assets/image/CnDBike.png')} />
+                                            
+                                            
                                             <View style={{flexDirection:'row', right: '10%', justifyContent: 'center'}}>
                                                 <Text style={{justifyContent:'center', top:'5%'}}>Vehicle 1</Text>
                                                 <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%'}}>
@@ -164,7 +181,13 @@ const VehicleDetailsPage = () => {
                                             
                                         </View>
                                         <View style={{flexDirection: 'row', justifyContent: 'space-between', margin:10}}>
-                                            <MIcon name='bike-scooter' size={30}></MIcon>
+                                        <Image 
+style={{height:35, width:35 }}
+  resizeMode = 'contain'
+source={require('../../../assets/image/CnDBike.png')} />
+                                            
+                                            
+                                            
                                             <View style={{flexDirection:'row', right: '10%', justifyContent: 'center'}}>
                                                 <Text style={{justifyContent:'center', top:'5%'}}>Vehicle 2</Text>
                                                 <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%'}}>

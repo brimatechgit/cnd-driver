@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, Pressable, CheckBox } from 'react-native';
+import { View, Text, TextInput, Pressable, CheckBox,Image } from 'react-native';
 import {Card} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -9,7 +9,6 @@ import Button from '../../components/Button/Button';
 import Verification from './Verification/Verification';
 import LoginTerms from './loginTerms/loginTerms';
 import SvgComponent from './svgComp';
-import Trt from '../../assets/image/try2.svg'
 
 const LoginPage = props => {
 
@@ -86,13 +85,24 @@ const LoginPage = props => {
             <View style={{height: 15}}></View>
             <View >
                 <Text style={{fontSize: 15, color: 'teal'}}>Or sign in with Socials</Text>
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection:'row'}}>
                     {/* Add Social icons here */}
-                    <IconIonic name='logo-google' color='tomato' size={25} style={{padding: 5}}></IconIonic>
-                    <IconIonic name='logo-facebook' color='royalblue' size={25} style={{padding: 5}}></IconIonic>
+                    <Image 
+                        style={{height: 30, padding:0, width: 30, margin:5}}
+                        resizeMode = 'contain'
+                        source={require('../../assets/image/google.png')} />
+                                            <Image 
+                        style={{ height: 30, width: 30, margin:5}}
+                        resizeMode = 'contain'
+                        source={require('../../assets/image/facebook.png')} />
                     
                 </View>
             </View>
+
+            {/* <Image 
+style={{flex: 1, width: 150}}
+  resizeMode = 'contain'
+source={require('../../../assets/image/Emergency.png')} /> */}
 {/* 
             <View style={{justifyContent: 'center', alignItems: 'center', elevation: 5, width: 250,left: 30 }}>
                         <Pressable style={styles.button} onPress={() => props.navigation.navigate(Verification)}>

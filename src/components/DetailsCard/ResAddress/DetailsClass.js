@@ -3,7 +3,7 @@ import { Button, Text, View, Pressable, TextInput } from "react-native";
 import Modal from "react-native-modal";
 import styles from './styles';
 
-function ModalTester() {
+function ModalTester(props) {
   const [isModalVisible, setModalVisible] = useState(false);
   const [streetName, onChangeStreetName] = React.useState('');
   const [buildingName, onChangeBuildingName] = React.useState('');

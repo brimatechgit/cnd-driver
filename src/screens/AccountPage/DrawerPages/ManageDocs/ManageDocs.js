@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity,Image } from 'react-native';
 import {Card}from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -8,7 +8,11 @@ import styles from './styles';
 const ManageDocsPage = props => {
     return ( 
         <View style={{flex:1, padding: 15}}>
-            <View style={{alignItems:'center', padding: 15}}>
+            <View style={{alignItems:'center', padding: 15, flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../../assets/image/Documents.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600', color: 'black'}}>Manage documents</Text>
             </View>
 

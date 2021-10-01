@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     inputBottom: {
         borderBottomColor: 'black',
         borderBottomWidth: 1,
-        width: 180,
+        width: '95%',
         padding: 5,
         margin: 5,
         justifyContent: 'flex-start'

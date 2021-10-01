@@ -96,11 +96,14 @@ const styles = StyleSheet.create({
     inputBottom: {
         borderBottomColor: 'black',
         borderBottomWidth: 1,
-        width: 180,
-        padding: 5,
+        width: '95%',
+        padding: 10,
         margin: 5,
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        color: 'teal'
     },
+
+    
 
     
 

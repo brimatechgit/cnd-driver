@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import { View, Text, TextInput, ScrollView, Pressable } from 'react-native';
+import { View, Text, TextInput, ScrollView, Pressable, Image } from 'react-native';
 import { Card, RadioButton } from 'react-native-paper';
 import DropDownPicker from "react-native-custom-dropdown";
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -28,7 +28,11 @@ const ManageVehiclesPage = () => {
         }}>
             <View style={styles.container}>
 
-            <View style={{alignItems:'center'}}>
+            <View style={{alignItems:'center', flexDirection:'row', justifyContent:'center'}}>
+            <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../../assets/image/Manage.png')} />
                 <Text style={{fontSize: 22, fontWeight: '600'}}>Manage Vehicle</Text>
             </View>
                 <View>
@@ -108,10 +112,13 @@ const ManageVehiclesPage = () => {
                                         <Text style={{fontSize:13}}>Added Vehicles:</Text>
                             
                                         <View style={{flexDirection: 'row', justifyContent: 'space-between', margin:10}}>
-                                            <MIcon name='bike-scooter' size={30}></MIcon>
+                                        <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../../assets/image/CnDBike.png')} />
                                             <View style={{flexDirection:'row', right: '10%', justifyContent: 'center'}}>
                                                 <Text style={{justifyContent:'center', top:'5%'}}>Vehicle 1</Text>
-                                                <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%'}}>
+                                                <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%',}}>
                                                     <Text>FGL FF GP</Text>
                                                 </Card>
 
@@ -120,7 +127,10 @@ const ManageVehiclesPage = () => {
                                             
                                         </View>
                                         <View style={{flexDirection: 'row', justifyContent: 'space-between', margin:10}}>
-                                            <MIcon name='bike-scooter' size={30}></MIcon>
+                                        <Image 
+style={{width: 45, height:45 }}
+  resizeMode = 'contain'
+source={require('../../../../assets/image/CnDBike.png')} />
                                             <View style={{flexDirection:'row', right: '10%', justifyContent: 'center'}}>
                                                 <Text style={{justifyContent:'center', top:'5%'}}>Vehicle 2</Text>
                                                 <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%'}}>
