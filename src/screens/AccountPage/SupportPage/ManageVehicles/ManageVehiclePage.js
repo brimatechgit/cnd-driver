@@ -30,10 +30,10 @@ const ManageVehiclesPage = () => {
 
             <View style={{alignItems:'center', flexDirection:'row', justifyContent:'center'}}>
             <Image 
-style={{width: 45, height:45 }}
+style={{width: 45, height:45, }}
   resizeMode = 'contain'
 source={require('../../../../assets/image/Manage.png')} />
-                <Text style={{fontSize: 22, fontWeight: '600'}}>Manage Vehicle</Text>
+                <Text style={{paddingLeft:15, fontSize: 22, fontWeight: '600'}}>Manage Vehicle</Text>
             </View>
                 <View>
                         

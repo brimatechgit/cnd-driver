@@ -107,7 +107,7 @@ const Verification = props => {
                     </Pressable>
                 </View> */}
 
-                <Button text='Continue' navPage='DocumentsPage' navigation={props.navigation}></Button>
+                <Button text='Continue' navPage='Home' navigation={props.navigation}></Button>
     </View>
  
      

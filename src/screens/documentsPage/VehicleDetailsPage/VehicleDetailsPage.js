@@ -221,9 +221,9 @@ source={require('../../../assets/image/CnDBike.png')} />
                             hasBackdrop={false}
                         >
                             <View style={{
-                                left: 10,
+                                left: '10%',
                                 height: 150,
-                                width: 300,
+                                width: 250,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 borderColor: '#ccc',
@@ -252,9 +252,9 @@ source={require('../../../assets/image/CnDBike.png')} />
                             hasBackdrop={false}
                         >
                             <View style={{
-                                left: 10,
+                                left: '10%',
                                 height: 150,
-                                width: 300,
+                                width: 250,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 borderColor: '#ccc',
@@ -268,8 +268,11 @@ source={require('../../../assets/image/CnDBike.png')} />
                                 <Pressable onPress={() => setModalVisibleMotor(false)} style={{position:'absolute', top: '5%', right: '4%'}}>
                                         <Icon name='close'  size={30}></Icon>
                                 </Pressable>
+
+                                
                                 <View style={{padding: 10, alignItems:'center'}}>
                                     <Text>CnD-Motor Dimensions</Text>
+                                    <View style={{height:15}}></View>
                                     <Text style={{fontWeight:'bold', letterSpacing:0.9}}>106x58x112 | 0 - 50KGs</Text>
                                 </View> 
 

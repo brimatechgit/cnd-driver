@@ -13,7 +13,7 @@ const ManageDocsPage = props => {
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
 source={require('../../../../assets/image/Documents.png')} />
-                <Text style={{fontSize: 22, fontWeight: '600', color: 'black'}}>Manage documents</Text>
+                <Text style={{paddingLeft:15, fontSize: 22, fontWeight: '600', color: 'black'}}>Manage documents</Text>
             </View>
 
             <View style={{paddingBottom: 35}}>

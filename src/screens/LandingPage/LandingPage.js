@@ -11,7 +11,7 @@ const LandingPage = props => {
         <View style={{flex: 1, alignItems:'center', padding:20}}>
             <View style={{height: '80%', alignItems: 'center', justifyContent: 'center'}}>
             <Image 
-style={{flex: 1, }}
+style={{flex: 1, width:250}}
   resizeMode = 'contain'
 source={require('../../assets/image/landingLogo.png')} />
             </View>

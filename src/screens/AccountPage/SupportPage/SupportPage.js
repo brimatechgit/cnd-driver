@@ -99,7 +99,7 @@ const SupportPage = (props) => {
                                 borderRadius: 25,
                             }}>
                                 <View style={{padding: 10, alignItems:'center', width:'75%'}}>
-                                    <Text style={{fontSize: 18, fontWeight:'bold',  color:'red', textAlign:'center'}}>Are you sure you want to Log out?</Text>
+                                    <Text style={{fontSize: 18, fontWeight:'500',  color:'red', textAlign:'center'}}>Are you sure you want to Log out?</Text>
 
                                 
                                 

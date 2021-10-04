@@ -18,7 +18,7 @@ const BankDetailsPage = () => {
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
 source={require('../../../../assets/image/BankingDetails.png')} />
-                <Text style={{fontSize: 22, fontWeight: '600'}}>Bank Details</Text>
+                <Text style={{paddingLeft:15,fontSize: 22, fontWeight: '600'}}>Bank Details</Text>
             </View>
 
             <View style={{padding: 10}}>
