@@ -12,7 +12,7 @@ const EmergencyPage = () => {
             <Image 
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
-source={require('../../../../assets/image/Emergency1.png')} />
+source={require('../../../../assets/image/Emergency.png')} />
                 <Text style={{paddingLeft:15,fontSize: 22, fontWeight: '600'}}>Emergency Contacts</Text>
             </View>
 

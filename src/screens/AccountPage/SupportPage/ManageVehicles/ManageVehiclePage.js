@@ -32,7 +32,7 @@ const ManageVehiclesPage = () => {
             <Image 
 style={{width: 45, height:45, }}
   resizeMode = 'contain'
-source={require('../../../../assets/image/Manage.png')} />
+source={require('../../../../assets/image/ManageVehicle.png')} />
                 <Text style={{paddingLeft:15, fontSize: 22, fontWeight: '600'}}>Manage Vehicle</Text>
             </View>
                 <View>
@@ -116,11 +116,8 @@ source={require('../../../../assets/image/Manage.png')} />
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
 source={require('../../../../assets/image/CnDBike.png')} />
-                                            <View style={{flexDirection:'row', right: '10%', justifyContent: 'center'}}>
-                                                <Text style={{justifyContent:'center', top:'5%'}}>Vehicle 1</Text>
-                                                <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%',}}>
-                                                    <Text>FGL FF GP</Text>
-                                                </Card>
+                                            <View style={{flexDirection:'row', right: '10%', justifyContent: 'center', alignItems:'center'}}>
+                                                <Text style={{fontWeight:'700', fontSize:17, color:'teal', letterSpacing:1.3}}>FGL FF GP</Text>
 
                                             </View>
                                                 <MIcon name='edit' size={25}></MIcon>
@@ -130,12 +127,11 @@ source={require('../../../../assets/image/CnDBike.png')} />
                                         <Image 
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
-source={require('../../../../assets/image/CnDBike.png')} />
-                                            <View style={{flexDirection:'row', right: '10%', justifyContent: 'center'}}>
-                                                <Text style={{justifyContent:'center', top:'5%'}}>Vehicle 2</Text>
-                                                <Card style={{elevation: 5, borderRadius: 50, justifyContent:'center', padding:5, left:'20%'}}>
-                                                    <Text>FGL FF GP</Text>
-                                                </Card>
+source={require('../../../../assets/image/CnDMotor.png')} />
+                                            <View style={{flexDirection:'row', right: '10%', justifyContent: 'center', alignItems:'center'}}>
+                                               
+                                                    <Text style={{fontWeight:'700', fontSize:17, color:'teal', letterSpacing:1.3}}>FGL FF GP</Text>
+                                                
 
                                             </View>
                                                 <MIcon name='edit' size={25}></MIcon>

@@ -53,7 +53,7 @@ const PersonalPage = () => {
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
 source={require('../../../assets/image/AccountSettings.png')} />
-                <Text style={{fontSize: 22, fontWeight: '600'}}>Personal Details</Text>
+                <Text style={{paddingLeft:15,fontSize: 22, fontWeight: '600'}}>Personal Details</Text>
             </View>
             <View>
                         

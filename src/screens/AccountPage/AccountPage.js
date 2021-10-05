@@ -100,7 +100,7 @@ source={require('../../assets/image/Document2.png')} />
         <Image 
 style={{width: 45, height:45 }}
   resizeMode = 'contain'
-source={require('../../assets/image/BankingDetails.png')} />
+source={require('../../assets/image/Banking.png')} />
                         <View style={styles.textContainer}>
 
                         <Text>Bank Details</Text>
