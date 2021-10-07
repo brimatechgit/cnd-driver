@@ -34,6 +34,8 @@ import ManageVehiclesPage from './src/screens/AccountPage/SupportPage/ManageVehi
 import EmergencyPage from './src/screens/AccountPage/SupportPage/EmergencyContacts/EmergancyPage';
 import PersonalPage from './src/screens/AccountPage/PersonalDetails/PersonalDetPage';
 import LoginTerms from './src/screens/LoginPage/loginTerms/loginTerms';
+import BookingsPage from './src/screens/AccountPage/SupportPage/Bookings/BookingsPage';
+import BookingsSummary from './src/screens/AccountPage/SupportPage/Bookings/HistorySummary';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -85,6 +87,8 @@ export default function App() {
         <Stack.Screen name="LoginTerms" component={LoginTerms} />
         <Stack.Screen name="EmergencyPage" component={EmergencyPage} />
         <Stack.Screen  name="AccountSettings" component={AccountSettings} />
+        <Stack.Screen  name="BookingsPage" component={BookingsPage} />
+        <Stack.Screen  name="BookingsSummary" component={BookingsSummary} />
         <Stack.Screen  name="CndTerms" component={CndTerms} />
         <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={AccountPage} />
         {/* <Stack.Screen options={{headerShown: false}}  name="AccountPage" component={UserDrawerPage} /> */}

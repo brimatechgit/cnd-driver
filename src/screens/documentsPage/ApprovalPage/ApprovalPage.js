@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable,Image } from 'react-native';
 import { Card } from 'react-native-paper';
 import styles from './styles';
 
@@ -13,8 +13,13 @@ const ApprovalPage = props => {
             </View>
 
             <Card style={{height: 320, borderRadius: 25, width: '100%', elevation: 8}}>
-                <View style={{height: 150, elevation: 6, backgroundColor: 'black', borderTopLeftRadius: 25, borderTopRightRadius: 25}}>
-                    <Text style={{color: 'white', justifyContent: 'center', alignItems: 'center', textAlign: 'center', fontSize: 20, top: '40%'}}>woohoo</Text>
+                <View style={{height: '55%', elevation: 6, backgroundColor: 'black', borderTopLeftRadius: 25, borderTopRightRadius: 25, justifyContent:'center', alignItems:'center'}}>
+                    {/* <Text style={{color: 'white', justifyContent: 'center', alignItems: 'center', textAlign: 'center', fontSize: 20, top: '40%'}}>woohoo</Text> */}
+
+                    <Image 
+style={{width:360, height:280}}
+  resizeMode = 'contain'
+source={require('../../../assets/image/WOOHOO.png')} />
                 </View>
                 <View style={{padding: 10, justifyContent: 'center', alignItems: 'center'}}> 
 

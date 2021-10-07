@@ -11,6 +11,8 @@ import styles from './styles';
 import EmergencyPage from './SupportPage/EmergencyContacts/EmergancyPage';
 import ManageVehiclesPage from './SupportPage/ManageVehicles/ManageVehiclePage';
 import PersonalPage from './PersonalDetails/PersonalDetPage';
+import BookingsPage from './SupportPage/Bookings/BookingsPage';
+import BookingsSummary from './SupportPage/Bookings/HistorySummary';
 
 const AccountPage = props => {
     return ( 
@@ -29,7 +31,7 @@ const AccountPage = props => {
             <View>
                 <Text style={{fontSize: 22, padding: 20, fontWeight:'bold'}}>General Settings</Text>
                 <View>
-                    <Pressable onPress={() => console.log('lol')} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
+                    <Pressable onPress={() => props.navigation.navigate(BookingsPage)} style={{padding: 5, flexDirection: 'row', elevation: 10}}>
                         
                         
                     <Image 
