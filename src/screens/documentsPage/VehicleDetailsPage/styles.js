@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
 
     main: {
         position: 'absolute',
-        justifyContent: 'center',
         alignItems: 'center',
         left: 25,
         top: 10,
@@ -17,8 +16,8 @@ const styles = StyleSheet.create({
     subMain: {
 
     },
-    form: {
-        
+    list: {
+        padding: 10
     },
     textCard: {
         elevation: 25,
@@ -38,7 +37,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 50,
         backgroundColor: 'white',
-        width: '100%',
         height: 65,
         justifyContent: 'center',
         flexDirection: 'row'
@@ -97,8 +95,21 @@ const styles = StyleSheet.create({
         width: 105,
         alignItems: 'center',
         justifyContent: 'center',
+        borderColor: 'black',
+        borderWidth:1
         
-    }
+    },
+    rowView: {
+        padding: 5
+    },
+
+    radioText: {
+        fontWeight: 'bold',
+        color: 'teal',
+        alignItems: 'center',
+        fontSize: 15,
+        paddingVertical: 5
+    },
 
 })
 

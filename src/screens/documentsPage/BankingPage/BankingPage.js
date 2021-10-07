@@ -23,7 +23,7 @@ const DetailsCard = props => {
     const [items, setItems] = React.useState([
         {label: 'Complex / Estate', value: 'Complex'},
         {label: 'Apartment', value: 'Apartment'},
-        {label: 'Hotel', value: 'Hotel'}
+        {label: 'Home', value: 'Home'}
       ]);
 
     const [modalVisible, setModalVisible] = useState(false);

@@ -88,17 +88,22 @@ const styles = StyleSheet.create({
         width: '45%',
         alignItems: 'center',
         justifyContent: 'center',
+        borderColor:'black',
+        borderWidth: 1
         
     },
 
     inputBottom: {
         borderBottomColor: 'black',
         borderBottomWidth: 1,
-        width: 180,
-        padding: 5,
+        width: '95%',
+        padding: 10,
         margin: 5,
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        color: 'teal'
     },
+
+    
 
     
 

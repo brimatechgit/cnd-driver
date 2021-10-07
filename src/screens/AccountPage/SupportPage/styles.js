@@ -41,8 +41,20 @@ const styles = StyleSheet.create({
     padding: 5, flexDirection: 'row', elevation: 10, alignItems: 'center'
    }, 
    textHeader: {
-    fontSize: 22, padding: 20
-   }
+    fontSize: 22, padding: 20, fontWeight:'800'
+   },
+   button: {
+      elevation: 3,
+      backgroundColor: 'white',
+      borderRadius: 50,
+      height: 45,
+      width: '45%',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderColor: 'teal',
+      borderWidth: 1,
+     
+  },
 
 });
 

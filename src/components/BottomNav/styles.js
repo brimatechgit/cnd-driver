@@ -2,14 +2,28 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create ({
+    // container: {
+    //     backgroundColor: 'white',
+    //     height: '10%',
+    //     borderTopEndRadius: 15,
+    //     borderTopStartRadius: 15,
+    //     flexDirection: 'row',
+    //     justifyContent: 'space-between',
+    //     padding: 10
+    // },
+
     container: {
+        position: 'absolute',
+        top: '85%',
         backgroundColor: 'white',
-        height: '10%',
+        height: '100%',
+        width: '100%',
         borderTopEndRadius: 15,
         borderTopStartRadius: 15,
         flexDirection: 'row',
+        alignItems: 'center',
+        padding: 10,
         justifyContent: 'space-between',
-        padding: 10
     },
 
     status: {
