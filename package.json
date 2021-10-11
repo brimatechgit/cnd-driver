@@ -1,9 +1,8 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "web": "expo start --web",
     "eject": "expo eject"
   },
@@ -15,7 +14,7 @@
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native": "~0.63.4",
     "react-native-custom-dropdown": "^1.0.1",
     "react-native-dropdown-picker": "^5.1.27",
     "react-native-gesture-handler": "^1.10.3",
@@ -29,10 +28,15 @@
     "react-native-svg": "^12.1.1",
     "react-native-svg-transformer": "^0.14.3",
     "react-native-switch": "^2.0.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "expo-splash-screen": "~0.11.2",
+    "expo-updates": "~0.8.1",
+    "react-native-unimodules": "0.14.10"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
   },
-  "private": true
+  "private": true,
+  "name": "cnd-driver",
+  "version": "1.0.0"
 }
