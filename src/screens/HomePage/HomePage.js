@@ -10,6 +10,7 @@ import AccountPage from '../AccountPage/AccountPage';
 import SupportPage from '../AccountPage/SupportPage/SupportPage';
 import AccountSettings from '../AccountPage/AccountSettings/AccountSettings';
 import MapComponent from '../../components/MapComponent/MapComponent';
+import { NavMapComponent } from '../../components/MapComponent/NavMapComponent';
 
 
 const HomePage = ({navigation}) => {
@@ -21,8 +22,10 @@ const HomePage = ({navigation}) => {
   };
     return ( 
         <View >
-          <MapComponent navigation={navigation}> </MapComponent>
-          <BottomNav navigation={navigation}> </BottomNav>
+          
+          <NavMapComponent navigation={navigation}> </NavMapComponent>
+          {/* <MapComponent navigation={navigation}> </MapComponent> */}
+          {/* <BottomNav navigation={navigation}> </BottomNav> */}
         </View>
      );
 }

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "cnd-driver",
+    "name": "ClicknDeliver - driver",
     "slug": "cnd-driver",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.brimatech.cnddriver"
     },
     "web": {
       "favicon": "./assets/favicon.png"
