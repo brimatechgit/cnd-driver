@@ -8,6 +8,7 @@ import AccountPage from '../../screens/AccountPage/AccountPage';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
 import { Card } from 'react-native-paper';
 import Octicons from 'react-native-vector-icons/Octicons';
+import Entypo from 'react-native-vector-icons/Entypo';
 import PulseCircleLayer from '../PulseCircleLayer';
 import CenteringButtonMap from '../CenteringButtonMap'
 
@@ -41,17 +42,9 @@ const MapComponent = props => {
 
   
   };
-  const toggleNav = (nav) => {
+  
 
-    toggleModal;
-    props.navigation.navigate(nav)
-  };
-
-  const onNavigate = () => {
-    this.setState({isModalVisible: false}, () => this.props.navigation.navigate('Main'));
-  };
-
-
+  const [order, setOrder] = useState(null)
   let [userLocation, setUserLocation] = useState(UserLocation);
   let [route, setRoute] = useState(null);
   let [started, setStarted] = useState(false);
@@ -93,43 +86,9 @@ const MapComponent = props => {
     setStarted(false);
   };
 
-  const renderDestinationPoint = () => {
-    return DestinationLocation && DestinationLocation.length > 0 && started ? (
-      <MapboxGL.PointAnnotation
-        id="destination"
-        title="destination location"
-        coordinate={DestinationLocation}>
-        <View style={styles.circle}>
-          <View style={styles.innerCircle}>
-            <View style={styles.dotCircle} />
-          </View>
-        </View>
-      </MapboxGL.PointAnnotation>
-    ) : null;
-  };
+  // const renderbottomCard = () => {
 
-  const renderStart = () => {
-    return StartLocation.length > 0 && started ? (
-      <MapboxGL.PointAnnotation
-        id="start"
-        title="start location"
-        coordinate={StartLocation}>
-        <View style={styles.circle}>
-          <View style={styles.innerCircle}>
-            <View style={styles.dotCircle} />
-          </View>
-        </View>
-      </MapboxGL.PointAnnotation>
-    ) : null;
-  };
-
-  const renderRoute = () => {
-    return route ? (
-      <MapboxGL.ShapeSource id="routeSource" shape={route}>
-        <MapboxGL.LineLayer id="routeFill" style={layerStyles.route} />
-      </MapboxGL.ShapeSource>
-    ) : null;
-  };
+  // }
 
   // Start Button
   const renderActions = () => (
@@ -144,6 +103,15 @@ const MapComponent = props => {
 
     return ( 
             <View style={styles.container}>
+
+
+              {
+                order && (
+                  <View>
+                    <Text></Text>
+                  </View>
+    )
+              }
             {/* <MapView style={styles.map} 
             
             style={{width: '100%', height: '100%'}}
@@ -195,12 +163,18 @@ onUpdate={newUserLocation =>
 onUserLocationUpdate(newUserLocation)
 }
 />
-{renderRoute()}
-{renderDestinationPoint()}
-{renderStart()}
+{/* <MapboxGL.MarkerView id={'hello'} coordinate={[73.20812, 22.29941]}>
+                            <View>
+                              
+                                <Entypo
+                                    name='location-pin'
+                                    size={24}
+                                    color='black'
+                                />
+                            </View>
+                        </MapboxGL.MarkerView> */}
 </MapboxGL.MapView>
-{renderActions()}
-<CenteringButtonMap onPress={() => centeringButtonPress()} />
+{/* <CenteringButtonMap onPress={() => centeringButtonPress()} /> */}
 
             <TouchableOpacity style={styles.overlay} onPress={toggleModal}>
             <Image 

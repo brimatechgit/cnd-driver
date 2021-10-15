@@ -23,9 +23,9 @@ const HomePage = ({navigation}) => {
     return ( 
         <View >
           
-          <NavMapComponent navigation={navigation}> </NavMapComponent>
-          {/* <MapComponent navigation={navigation}> </MapComponent> */}
-          {/* <BottomNav navigation={navigation}> </BottomNav> */}
+          {/* <NavMapComponent navigation={navigation}> </NavMapComponent> */}
+          <MapComponent navigation={navigation}> </MapComponent>
+          <BottomNav navigation={navigation}> </BottomNav>
         </View>
      );
 }

@@ -59,7 +59,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="SplashPage"
+      initialRouteName="LandingPage"
        screenOptions={{
         header: CustomNavigationBar,
       }}
